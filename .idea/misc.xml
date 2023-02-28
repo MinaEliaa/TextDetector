@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.143" />
+        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/ic_launcher_background.xml" value="0.143" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/activity_splash_screen.xml" value="0.25416666666666665" />
       </map>
