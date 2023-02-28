@@ -6,4 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".SplashScreen">
 
+    <ImageView
+        android:id="@+id/logo_app"
+        android:layout_width="119dp"
+        android:layout_height="119dp"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/dt_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/picolafont"
+        android:text="@string/text_detector"
+        android:textColor="#2C00FF"
+        android:textSize="42sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_app"
+
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
