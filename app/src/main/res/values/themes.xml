@@ -19,5 +19,14 @@
         <item name="windowActionBar">false</item>
     </style>
 
+    <style name="Theme.TextDetector.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.TextDetector.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.TextDetector.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 
 </resources>
