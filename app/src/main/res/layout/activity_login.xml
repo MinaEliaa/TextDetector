@@ -31,6 +31,7 @@
     <TextView
         android:id="@+id/login_label"
         android:layout_width="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_height="0dp"
         android:fontFamily="@font/picolafont"
         android:paddingTop="100dp"
@@ -57,6 +58,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:maxLines="1"
             android:background="@drawable/rounder_bourder"
             android:hint="Email"
 
@@ -74,6 +76,9 @@
         android:layout_marginEnd="32dp"
         android:paddingTop="18dp"
         app:boxBackgroundMode="none"
+        app:endIconDrawable="@drawable/ic_delete"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Email_InputLayout"
@@ -82,6 +87,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/white"
             android:background="@drawable/rounder_bourder"
             android:hint="Password"
 
@@ -91,14 +98,10 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-
-
-
     <Button
         android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_marginEnd="32dp"
         android:background="@drawable/rounder_bourder"
         android:layout_marginTop="18.7dp"
@@ -106,7 +109,6 @@
         android:fontFamily="@font/roboto_light"
         app:layout_constraintTop_toBottomOf="@id/Password_InputLayout"
         android:gravity="center"
-        android:marginTop="14dp"
         android:text="Login"
         android:textColor="@color/white"
         android:textSize="27sp" />
@@ -130,7 +132,6 @@
         android:id="@+id/create_account"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_marginEnd="32dp"
         android:background="@drawable/rounder_bourder"
         android:layout_marginTop="18.7dp"
@@ -138,10 +139,9 @@
         android:fontFamily="@font/roboto_light"
         app:layout_constraintTop_toBottomOf="@id/forget_password"
         android:gravity="center"
-        android:marginTop="14dp"
         android:text="CREATE ACCOUNT"
         android:textColor="@color/white"
-        android:textSize="27sp"/>
+        android:textSize="27sp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
