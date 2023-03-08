@@ -208,24 +208,27 @@
             android:gravity="center"
             android:text="CREATE ACCOUNT"
             android:textColor="@color/white"
-            android:textSize="27sp"
+            android:textSize="25sp"
             app:layout_constraintTop_toBottomOf="@id/ConfirmPassword_InputLayout"
 
 
             />
 
         <TextView
-            android:id="@+id/SignUp"
+            android:id="@+id/SignIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/picolafont"
             android:text="Sign in"
+            android:layout_marginTop="600dp"
             android:textColor="@color/blue"
             android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/donotHaveAnAccount"
-            tools:layout_editor_absoluteY="600dp" />
+            tools:layout_editor_absoluteY="600dp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/donotHaveAnAccount"
@@ -236,7 +239,7 @@
             android:text="already have an account ? "
             android:textColor="#BEBDBD"
             android:textSize="22sp"
-            app:layout_constraintEnd_toStartOf="@+id/SignUp"
+            app:layout_constraintEnd_toStartOf="@+id/SignIn"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
