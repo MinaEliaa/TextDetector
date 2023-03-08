@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="10dp"
-        android:fontFamily="@font/picolafont"
+        android:fontFamily="@font/arial_bold"
         android:paddingTop="80dp"
         android:text="Login"
         android:textColor="@color/black"
@@ -67,8 +67,9 @@
 
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="22sp"
+
             app:textInputLayoutFocusedRectEnabled="true" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -106,7 +107,8 @@
 
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
+
             android:textSize="22sp"
 
 
@@ -123,11 +125,11 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/rounder_gradient_bourder"
-        android:fontFamily="@font/roboto_light"
+        android:fontFamily="@font/arial_bold"
         android:gravity="center"
         android:text="Login"
         android:textColor="@color/white"
-        android:textSize="25sp"
+        android:textSize="24sp"
         app:layout_constraintTop_toBottomOf="@id/Password_InputLayout" />
 
     <TextView

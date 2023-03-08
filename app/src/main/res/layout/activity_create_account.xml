@@ -34,11 +34,11 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/picolafont"
+            android:fontFamily="@font/arial_bold"
             android:paddingTop="120dp"
-            android:text="sign up"
+            android:text="Sign up"
             android:textColor="@color/black"
-            android:textSize="40sp"
+            android:textSize="35sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -75,7 +75,7 @@
                 android:maxLines="1"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="22sp"
                 app:textInputLayoutFocusedRectEnabled="true" />
 
@@ -112,7 +112,7 @@
 
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="22sp"
                 app:textInputLayoutFocusedRectEnabled="true" />
 
@@ -188,7 +188,7 @@
 
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="22sp"
 
 
@@ -204,11 +204,11 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="32dp"
             android:background="@drawable/rounder_bourder"
-            android:fontFamily="@font/roboto_light"
+            android:fontFamily="@font/arial_bold"
             android:gravity="center"
             android:text="CREATE ACCOUNT"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="24sp"
             app:layout_constraintTop_toBottomOf="@id/ConfirmPassword_InputLayout"
 
 
