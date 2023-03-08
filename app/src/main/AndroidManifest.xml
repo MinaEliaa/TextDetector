@@ -14,10 +14,18 @@
         android:theme="@style/Theme.TextDetector"
         tools:targetApi="31">
         <activity
-            android:name=".ForgetPasswordActivity"
+            android:name=".CreateAccount"
+            android:exported="false"
+            android:label="@string/title_activity_create_account"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/Theme.TextDetector.NoActionBar" />
+        <activity
+            android:name=".ForgetPassword"
             android:exported="false"
             android:label="@string/title_activity_forget_password"
-            android:theme="@style/Theme.TextDetector.NoActionBar" />
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/Theme.TextDetector.NoActionBar"/>
+
         <activity
             android:name=".LoginActivity"
             android:exported="false"
