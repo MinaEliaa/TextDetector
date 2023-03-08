@@ -17,7 +17,7 @@ class SplashScreen : AppCompatActivity() {
     }
 
     fun starthomeactivity() {
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
         finish()
 
