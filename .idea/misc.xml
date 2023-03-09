@@ -7,6 +7,7 @@
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/gradient_color.xml" value="0.1" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.1815" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.1815" />
+        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/ic_blue_arrow_back.xml" value="0.1295" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/ic_email.xml" value="0.2595" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/ic_launcher_background.xml" value="0.143" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/ic_lock.xml" value="0.2595" />
@@ -17,7 +18,7 @@
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/activity_create_account.xml" value="0.264" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/activity_forget_password.xml" value="0.264" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/activity_login.xml" value="0.264" />
-        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/activity_main.xml" value="0.136" />
+        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/activity_splash_screen.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/login_page.xml" value="0.25416666666666665" />
       </map>

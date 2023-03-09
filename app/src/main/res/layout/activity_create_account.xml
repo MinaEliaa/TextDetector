@@ -11,23 +11,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorTransparent"
-        android:theme="@style/Theme.TextDetector.AppBarOverlay"
         app:elevation="0dp">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorTransparent"
-            app:popupTheme="@style/Theme.TextDetector.PopupOverlay" />
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/backarrow"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:src="@drawable/ic_blue_arrow_back"
+                android:paddingTop="5dp"
+
+
+                />
+
+
+
+
+        </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-        tools:context=".CreateAccount">
+        tools:context=".CreateAccountt">
 
         <TextView
             android:id="@+id/SignUp_label"
@@ -45,7 +61,7 @@
             tools:ignore="HardcodedText" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/userName_Input"
+            android:id="@+id/UserName_Input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -57,8 +73,7 @@
             app:endIconMode="clear_text"
             app:endIconTint="@color/white"
             app:helperText="TextDetector"
-
-            app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/SignUp_label"
             app:startIconDrawable="@drawable/ic_person_"
@@ -66,7 +81,8 @@
 
             >
 
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
+                android:id="@+id/et_Username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounder_bourder"
@@ -96,13 +112,13 @@
             app:helperText="TextDetector90@gmail.com"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/userName_Input"
+            app:layout_constraintTop_toBottomOf="@id/UserName_Input"
             app:startIconDrawable="@drawable/ic_email_"
             app:startIconTint="@color/white"
-
             >
 
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
+                android:id="@+id/et_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounder_bourder"
@@ -137,7 +153,8 @@
             app:startIconDrawable="@drawable/ic_lock_"
             app:startIconTint="@color/white">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
+                android:id="@+id/et_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounder_bourder"
@@ -176,7 +193,8 @@
             app:startIconDrawable="@drawable/ic_lock_"
             app:startIconTint="@color/white">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
+                android:id="@+id/et_confirmpassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounder_bourder"
