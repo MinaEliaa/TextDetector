@@ -2,7 +2,7 @@ package com.example.textdetector;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -60,13 +60,15 @@ public class CreateAccount extends AppCompatActivity {
             public void onClick(View view) {
                 email = inputEmail.getText().toString();
                 password = inputPassword.getText().toString();
-                Log.d("email", "onCreate: "+email + password);
+               // Log.d("email", "onCreate: "+email + password);
                 //checkCredentials();
+                if(checkCredentials())
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(CreateAccount.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
+                                    LoginToast();
                                     FirebaseUser user = mAuth.getCurrentUser();
                                     Intent i = new Intent(CreateAccount.this,HomeActivity.class);
                                     startActivity(i);
@@ -90,8 +92,9 @@ public class CreateAccount extends AppCompatActivity {
 
     }
 
-    private void checkCredentials() {
+    private Boolean checkCredentials() {
 
+        Boolean isValid = true;
         String username = inputUsername.getText().toString();
         String email = inputEmail.getText().toString();
         String password = inputPassword.getText().toString();
@@ -99,17 +102,31 @@ public class CreateAccount extends AppCompatActivity {
 
         if (username.isEmpty() ) {
             showError(inputUsername, "your username is not valid");
+            isValid = false ;
         } else if (email.isEmpty() || !email.contains("@")) {
             showError(inputEmail, "Email is not valid");
+            isValid = false ;
         } else if (password.isEmpty() || password.length() < 10) {
             showError(inputPassword, "Password is not valid");
+            isValid = false ;
         } else if (confirmpassword.isEmpty() || !confirmpassword.equals(password)) {
             showError(inputConfirmPassword, "Password not match");
+            isValid = false ;
         } else {
-            Toast.makeText(this, "call Registration", Toast.LENGTH_LONG).show();
+            isValid = true;
+
         }
+    return isValid;
 
+    }
+    private void LoginToast(){
+        LayoutInflater inflater=getLayoutInflater();
+        View view = inflater.inflate(R.layout.login_successful_toast,this.findViewById(R.id.Toast_login));
 
+        Toast toast = new Toast(this);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setView(view);
+        toast.show();
     }
     private void showError(EditText input, String s) {
         input.setError(s);
