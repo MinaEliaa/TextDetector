@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="210dp"
+    android:layout_height="30dp"
+    android:id="@+id/Toast_login"
+    android:background="@drawable/toasterror"
+    android:layout_margin="10dp"
+    android:layout_marginTop="15dp"
+
+
+
+    >
+
+
+    <LinearLayout
+        android:layout_width="210dp"
+        android:layout_height="30dp"
+        android:elevation="0dp"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/errorfinal"
+
+            />
+
+        <TextView
+            android:id="@+id/success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/arial_bold"
+            android:text="UNSUCCESSFUL"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

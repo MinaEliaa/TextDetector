@@ -11,4 +11,11 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_create_account">CreateAccount</string>
+    <string name="title_activity_original">OriginalActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="Home">Home</string>
+    <string name="Add">Add</string>
+    <string name="Archive">Archive</string>
 </resources>
