@@ -48,13 +48,12 @@
                 style="@style/bottom_nav_bar_theme"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                app:itemIconSize="35dp"
+                android:paddingBottom="5dp"
+                app:itemIconSize="28dp"
                 app:itemTextColor="@color/bottom_nav_bar_color_select"
                 app:itemIconTint="@color/bottom_nav_bar_color_select"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:menu="@menu/home_nav_menu"
-
-
 
                 />
 
@@ -68,7 +67,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.288" />
-
             <ProgressBar
                 android:id="@+id/progressBar2"
                 android:layout_width="457dp"
@@ -88,7 +86,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.369" />
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
