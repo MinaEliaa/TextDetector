@@ -4,14 +4,16 @@
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_homewhite"
-        android:title="@string/Home"/>
+        android:title="@string/Home"
+
+        />
     <item
         android:id="@+id/navigation_add"
         android:icon="@drawable/ic_add"
         android:title="@string/Add"/>
     <item
         android:id="@+id/navigation_archive"
-        android:icon="@drawable/ic_archive"
+        android:icon="@drawable/ic_folderfinal"
         android:title="@string/Archive"/>
 
 

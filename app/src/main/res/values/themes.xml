@@ -29,5 +29,10 @@
 
     <style name="Theme.TextDetector.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="bottom_nav_bar_theme">
+
+        <item name="android:background">#F5F5F5</item>
+    </style>
+
 
 </resources>
