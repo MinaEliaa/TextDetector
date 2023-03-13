@@ -81,12 +81,8 @@ public class CreateAccount extends AppCompatActivity {
         });
 
 
-        signinBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(CreateAccount.this, LoginActivity.class));
-            }
-        });
+        signinBtn.setOnClickListener
+                (view -> startActivity(new Intent(CreateAccount.this, LoginActivity.class)));
 
 
 
@@ -107,7 +103,7 @@ public class CreateAccount extends AppCompatActivity {
             showError(inputEmail, "Email is not valid");
             isValid = false ;
         } else if (password.isEmpty() || password.length() < 10) {
-            showError(inputPassword, "Password is not valid");
+            showError(inputPassword, "Password more than 9");
             isValid = false ;
         } else if (confirmpassword.isEmpty() || !confirmpassword.equals(password)) {
             showError(inputConfirmPassword, "Password not match");
