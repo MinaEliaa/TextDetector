@@ -14,10 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-
-
-
         <TextView
             android:id="@+id/Hey"
             android:layout_width="wrap_content"
@@ -30,7 +26,6 @@
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="0dp" />
-
         <TextView
 
             android:id="@+id/UserName_EditText"
@@ -45,8 +40,6 @@
             app:layout_constraintStart_toEndOf="@id/Hey"
 
             tools:ignore="MissingConstraints" />
-
-
         <TextView
             android:id="@+id/press_addtostart"
             android:layout_width="wrap_content"
@@ -83,10 +76,9 @@
             app:trackColor="#F5F5F5"
             app:trackCornerRadius="20dp"
             app:trackThickness="40dp" />
-
         <com.google.android.material.progressindicator.CircularProgressIndicator
             android:id="@+id/progressbar2"
-            trackCornerRadius="5dp"
+            trackCornerRadius="4dp"
             android:layout_width="312dp"
             android:layout_height="309dp"
             android:progress="1"
@@ -99,8 +91,7 @@
 
             app:trackColor="#F5F5F5"
             app:trackCornerRadius="20dp"
-            app:trackThickness="40dp" />
-
+            app:trackThickness="39dp" />
         <com.google.android.material.progressindicator.CircularProgressIndicator
             android:id="@+id/progressbar3"
             trackCornerRadius="5dp"
@@ -108,7 +99,7 @@
             android:layout_height="309dp"
             android:progress="1"
             app:indicatorColor="@color/yellowProgess"
-            app:indicatorSize="90dp"
+            app:indicatorSize="100dp"
 
 
             app:layout_constraintBottom_toBottomOf="@id/progressbar2"
@@ -119,8 +110,8 @@
             app:layout_constraintTop_toTopOf="@+id/progressbar2"
 
             app:trackColor="#F5F5F5"
-            app:trackCornerRadius="16dp"
-            app:trackThickness="30dp" />
+            app:trackCornerRadius="20dp"
+            app:trackThickness="33dp" />
 
         <!--first sort-->
         <View
@@ -132,7 +123,6 @@
             android:background="@drawable/bourder_hatespeech"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/progressbar1" />
-
         <TextView
             android:id="@+id/first_language_label"
             android:layout_width="wrap_content"
@@ -147,7 +137,6 @@
             app:layout_constraintTop_toTopOf="@id/first_square"
 
             />
-
         <TextView
             android:id="@+id/percentage_first"
             android:layout_width="wrap_content"
@@ -159,7 +148,6 @@
             app:layout_constraintBottom_toBottomOf="@id/first_language_label"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/first_language_label" />
-
         <View
             android:id="@+id/first_line"
             android:layout_width="match_parent"
@@ -176,11 +164,10 @@
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginStart="50dp"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="48dp"
             android:background="@drawable/bourder_offensive"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/first_square" />
-
         <TextView
             android:id="@+id/second_language_label"
             android:layout_width="wrap_content"
@@ -195,7 +182,6 @@
             app:layout_constraintTop_toTopOf="@id/second_square"
 
             />
-
         <TextView
             android:id="@+id/percentage_second"
             android:layout_width="wrap_content"
@@ -207,7 +193,6 @@
             app:layout_constraintBottom_toBottomOf="@id/second_language_label"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/second_language_label" />
-
         <View
             android:id="@+id/second_line"
             android:layout_width="match_parent"
@@ -224,7 +209,7 @@
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginStart="50dp"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="48dp"
             android:background="@drawable/bourder_neither"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/second_square" />
