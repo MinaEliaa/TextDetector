@@ -1,4 +1,4 @@
-package com.example.textdetector;
+package com.example.textdetector.ui.signup;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.textdetector.R;
+import com.example.textdetector.ui.home.HomeActivity;
+import com.example.textdetector.ui.login.LoginActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -51,7 +54,7 @@ public class CreateAccount extends AppCompatActivity {
         BackBlueArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(CreateAccount.this,LoginActivity.class));
+                startActivity(new Intent(CreateAccount.this, LoginActivity.class));
             }
         });
         createAccountBtn.setOnClickListener(new View.OnClickListener() {
@@ -70,7 +73,7 @@ public class CreateAccount extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     LoginToast();
                                     FirebaseUser user = mAuth.getCurrentUser();
-                                    Intent i = new Intent(CreateAccount.this,HomeActivity.class);
+                                    Intent i = new Intent(CreateAccount.this, HomeActivity.class);
                                     startActivity(i);
                                 } else {
                                     // If sign in fails, display a message to the user.
@@ -99,7 +102,12 @@ public class CreateAccount extends AppCompatActivity {
         if (username.isEmpty() ) {
             showError(inputUsername, "your username is not valid");
             isValid = false ;
-        } else if (email.isEmpty() || !email.contains("@")) {
+
+        } else if (username.length() > 12){
+            showError(inputUsername, "username must not exceed 12");
+            isValid = false ;
+        }
+        else if (email.isEmpty() || !email.contains("@")) {
             showError(inputEmail, "Email is not valid");
             isValid = false ;
         } else if (password.isEmpty() || password.length() < 10) {

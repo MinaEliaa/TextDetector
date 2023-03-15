@@ -33,6 +33,13 @@
 
         <item name="android:background">#F5F5F5</item>
     </style>
+    <style name="CustomProgressBar" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/circular_progress_bar</item>
+        <item name= "android:max">60</item>
+        <item name="cornerRadius">@dimen/corner_radius_large</item>
+    </style>
 
 
+    <dimen name="corner_radius_large" />
 </resources>

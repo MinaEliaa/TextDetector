@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".ui.home.fragments.HomeFragment"
+
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+
+        <TextView
+            android:id="@+id/Hey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/visby"
+            android:paddingStart="20dp"
+            android:text="Hey,"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+
+            android:id="@+id/UserName_EditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/visby"
+            android:paddingStart="5dp"
+            android:text="Mina Elia"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            app:layout_constraintStart_toEndOf="@id/Hey"
+
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/press_addtostart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/visby_regular"
+            android:paddingStart="20dp"
+            android:paddingTop="8dp"
+            android:text="Press Add To Start"
+            android:textColor="#BEBDBD"
+            android:textSize="30sp"
+            app:layout_constraintTop_toBottomOf="@id/UserName_EditText"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progressbar1"
+            trackCornerRadius="5dp"
+            android:layout_width="343dp"
+            android:layout_height="353dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="80dp"
+            android:progress="1"
+            app:indicatorColor="@color/blueProgess"
+
+            app:indicatorSize="305dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.618"
+
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/press_addtostart"
+            app:layout_constraintVertical_bias="0.054"
+            app:trackColor="#F5F5F5"
+            app:trackCornerRadius="20dp"
+            app:trackThickness="40dp" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progressbar2"
+            trackCornerRadius="5dp"
+            android:layout_width="312dp"
+            android:layout_height="309dp"
+            android:progress="1"
+            app:indicatorColor="@color/redProgess"
+            app:indicatorSize="200dp"
+            app:layout_constraintBottom_toBottomOf="@id/progressbar1"
+            app:layout_constraintEnd_toEndOf="@id/progressbar1"
+            app:layout_constraintStart_toStartOf="@id/progressbar1"
+            app:layout_constraintTop_toTopOf="@id/progressbar1"
+
+            app:trackColor="#F5F5F5"
+            app:trackCornerRadius="20dp"
+            app:trackThickness="40dp" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progressbar3"
+            trackCornerRadius="5dp"
+            android:layout_width="312dp"
+            android:layout_height="309dp"
+            android:progress="1"
+            app:indicatorColor="@color/yellowProgess"
+            app:indicatorSize="90dp"
+
+
+            app:layout_constraintBottom_toBottomOf="@id/progressbar2"
+
+            app:layout_constraintEnd_toEndOf="@id/progressbar2"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="@id/progressbar2"
+            app:layout_constraintTop_toTopOf="@+id/progressbar2"
+
+            app:trackColor="#F5F5F5"
+            app:trackCornerRadius="16dp"
+            app:trackThickness="30dp" />
+
+        <!--first sort-->
+        <View
+            android:id="@+id/first_square"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bourder_hatespeech"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progressbar1" />
+
+        <TextView
+            android:id="@+id/first_language_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/visby_medium"
+            android:text="Hate Language"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/first_square"
+            app:layout_constraintStart_toEndOf="@id/first_square"
+            app:layout_constraintTop_toTopOf="@id/first_square"
+
+            />
+
+        <TextView
+            android:id="@+id/percentage_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            android:text="0%"
+
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/first_language_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/first_language_label" />
+
+        <View
+            android:id="@+id/first_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="60dp"
+            android:background="@drawable/line"
+            android:backgroundTint="#CDCDCD"
+            app:layout_constraintTop_toBottomOf="@id/first_square" />
+        <!--second sort-->
+        <View
+            android:id="@+id/second_square"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/bourder_offensive"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/first_square" />
+
+        <TextView
+            android:id="@+id/second_language_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/visby_medium"
+            android:text="Offensive Language"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/second_square"
+            app:layout_constraintStart_toEndOf="@id/second_square"
+            app:layout_constraintTop_toTopOf="@id/second_square"
+
+            />
+
+        <TextView
+            android:id="@+id/percentage_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            android:text="0%"
+
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/second_language_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/second_language_label" />
+
+        <View
+            android:id="@+id/second_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="60dp"
+            android:background="@drawable/line"
+            android:backgroundTint="#CDCDCD"
+            app:layout_constraintTop_toBottomOf="@id/second_square" />
+        <!--third sort-->
+        <View
+            android:id="@+id/third_square"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/bourder_neither"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/second_square" />
+        <TextView
+            android:id="@+id/third_language_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/visby_medium"
+            android:text="Neither Language"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/third_square"
+            app:layout_constraintStart_toEndOf="@id/third_square"
+            app:layout_constraintTop_toTopOf="@id/third_square"
+
+            />
+        <TextView
+            android:id="@+id/percentage_third"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            android:text="0%"
+
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/third_language_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/third_language_label" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
