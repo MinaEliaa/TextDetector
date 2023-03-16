@@ -15,6 +15,21 @@
         android:layout_height="match_parent">
 
         <TextView
+
+            android:id="@+id/UserName_EditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/visby"
+            android:paddingStart="5dp"
+            android:text="Mina Elia Louise"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintStart_toEndOf="@id/Hey"
+
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="8dp" />
+
+        <TextView
             android:id="@+id/Hey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,28 +40,16 @@
             android:textSize="30sp"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp" />
-        <TextView
+            tools:layout_editor_absoluteY="8dp" />
 
-            android:id="@+id/UserName_EditText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:fontFamily="@font/visby"
-            android:paddingStart="5dp"
-            android:text="Mina Elia Louise"
-            android:textColor="@color/black"
-            android:textSize="30sp"
-            app:layout_constraintStart_toEndOf="@id/Hey"
-
-            tools:ignore="MissingConstraints" />
         <TextView
             android:id="@+id/press_addtostart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:fontFamily="@font/visby_regular"
             android:paddingStart="20dp"
-            android:paddingTop="8dp"
+            android:paddingTop="4dp"
             android:text="Press Add To Start"
             android:textColor="#BEBDBD"
             android:textSize="28sp"
@@ -72,10 +75,11 @@
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/press_addtostart"
-            app:layout_constraintVertical_bias="0.054"
+            app:layout_constraintVertical_bias="0.102"
             app:trackColor="#F5F5F5"
             app:trackCornerRadius="20dp"
             app:trackThickness="40dp" />
+
         <com.google.android.material.progressindicator.CircularProgressIndicator
             android:id="@+id/progressbar2"
             trackCornerRadius="4dp"
@@ -118,17 +122,17 @@
             android:id="@+id/first_square"
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/bourder_hatespeech"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@id/Hey"
             app:layout_constraintTop_toBottomOf="@id/progressbar1" />
         <TextView
             android:id="@+id/first_language_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:fontFamily="@font/visby_medium"
+            android:fontFamily="@font/visby_demibold"
             android:text="Hate Language"
             android:textColor="@color/black"
             android:textSize="18sp"
@@ -141,7 +145,7 @@
             android:id="@+id/percentage_first"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="50dp"
+            android:layout_marginEnd="40dp"
             android:text="0%"
 
             android:textSize="18sp"
@@ -163,7 +167,7 @@
             android:id="@+id/second_square"
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="48dp"
             android:background="@drawable/bourder_offensive"
             app:layout_constraintStart_toStartOf="parent"
@@ -173,7 +177,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:fontFamily="@font/visby_medium"
+            android:fontFamily="@font/visby_demibold"
             android:text="Offensive Language"
             android:textColor="@color/black"
             android:textSize="18sp"
@@ -186,7 +190,7 @@
             android:id="@+id/percentage_second"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="50dp"
+            android:layout_marginEnd="40dp"
             android:text="0%"
 
             android:textSize="18sp"
@@ -208,7 +212,7 @@
             android:id="@+id/third_square"
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="48dp"
             android:background="@drawable/bourder_neither"
             app:layout_constraintStart_toStartOf="parent"
@@ -218,7 +222,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:fontFamily="@font/visby_medium"
+            android:fontFamily="@font/visby_demibold"
             android:text="Neither Language"
             android:textColor="@color/black"
             android:textSize="18sp"
@@ -231,7 +235,7 @@
             android:id="@+id/percentage_third"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="50dp"
+            android:layout_marginEnd="40dp"
             android:text="0%"
 
             android:textSize="18sp"
