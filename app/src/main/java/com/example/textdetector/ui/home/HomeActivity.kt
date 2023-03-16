@@ -3,18 +3,14 @@ package com.example.textdetector.ui.home
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.view.MenuItem
 import android.view.View
 import android.widget.ImageView
-import android.widget.ProgressBar
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.textdetector.ui.login.LoginActivity
 import com.example.textdetector.R
 import com.example.textdetector.ui.home.fragments.AddFragment
-import com.example.textdetector.ui.home.fragments.ArchiveFragment
+import com.example.textdetector.ui.home.fragments.archive.ArchiveFragment
 import com.example.textdetector.ui.home.fragments.HomeFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
@@ -47,7 +43,7 @@ class HomeActivity : AppCompatActivity() {
             else if (menuitem.itemId == R.id.navigation_archive){
                 supportFragmentManager
                     .beginTransaction()
-                    .replace(R.id.fragment_contanier,ArchiveFragment())
+                    .replace(R.id.fragment_contanier, ArchiveFragment())
                     .commit()
             }
             return@OnItemSelectedListener true

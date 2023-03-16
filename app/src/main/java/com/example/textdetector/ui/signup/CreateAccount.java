@@ -79,6 +79,7 @@ public class CreateAccount extends AppCompatActivity {
                                     i.putExtra("userName",username);
                                     startActivity(i);
 
+
                                 } else {
                                     // If sign in fails, display a message to the user.
                                 }
@@ -110,7 +111,7 @@ public class CreateAccount extends AppCompatActivity {
             isValid = false ;
 
         } else if (username.length() > 15){
-            showError(inputUsername, "username must not exceed 12");
+            showError(inputUsername, "username must not exceed 15");
             isValid = false ;
         }
         else if (email.isEmpty() || !email.contains("@")) {
