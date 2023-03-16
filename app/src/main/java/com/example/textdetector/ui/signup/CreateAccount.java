@@ -109,7 +109,7 @@ public class CreateAccount extends AppCompatActivity {
             showError(inputUsername, "your username is not valid");
             isValid = false ;
 
-        } else if (username.length() > 12){
+        } else if (username.length() > 15){
             showError(inputUsername, "username must not exceed 12");
             isValid = false ;
         }

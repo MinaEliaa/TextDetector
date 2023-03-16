@@ -87,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounder_bourder"
                 android:hint="UserName"
-                android:maxLength="10"
+                android:maxLength="15"
                 android:maxLines="1"
                 android:paddingTop="10dp"
                 android:paddingEnd="40dp"
