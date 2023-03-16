@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".SplashScreen">
+    tools:context=".ui.splash.SplashScreen">
 
     <ImageView
         android:id="@+id/logo_app"
@@ -20,6 +20,7 @@
         tools:ignore="ContentDescription" />
 
     <TextView
+        android:id="@+id/textdetector_Label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/picolafont"
@@ -32,4 +33,16 @@
 
         />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/tondo"
+        android:text="Graduation Project"
+        android:textColor="#BEBDBD"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textdetector_Label"
+
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".LoginActivity">
+    tools:context=".ui.login.LoginActivity">
 
 
     <TextView
@@ -25,22 +25,21 @@
         android:id="@+id/login_label"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginStart="10dp"
-        android:fontFamily="@font/arial_bold"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/visby"
         android:paddingTop="80dp"
-        android:text="Login"
+            android:text="Log In"
         android:textColor="@color/black"
         android:textSize="35sp"
-        app:layout_constraintStart_toStartOf="@+id/Email_InputLayout"
+        app:layout_constraintStart_toStartOf="@+id/Email_Input"
         app:layout_constraintTop_toBottomOf="@id/TextDetector_Label"
         tools:ignore="HardcodedText" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Email_InputLayout"
+        android:id="@+id/Email_Input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginLeft="20dp"
         android:layout_marginEnd="32dp"
         android:inputType="textEmailAddress"
         android:paddingTop="12dp"
@@ -48,35 +47,37 @@
         app:boxBackgroundMode="none"
         app:endIconMode="clear_text"
         app:endIconTint="@color/white"
-        app:helperText="TextDetector90@gmail.com"
+        app:helperText="TextDetector@gmail.com"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/login_label"
-        app:startIconDrawable="@drawable/icon_email"
+        app:startIconDrawable="@drawable/ic_email_"
         app:startIconTint="@color/white"
 
         >
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
+            android:id="@+id/et_email_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rounder_bourder"
             android:hint="Email"
-            android:maxLength="20"
+            android:maxLength="40"
             android:maxLines="1"
-
+            android:paddingEnd="40dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:textColor="@color/black"
-            android:textSize="22sp"
+            android:textSize="16sp"
 
-            app:textInputLayoutFocusedRectEnabled="true" />
+            app:textInputLayoutFocusedRectEnabled="true"
+            tools:ignore="HardcodedText" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Password_InputLayout"
+        android:id="@+id/Password_Input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -87,32 +88,34 @@
         app:boxBackgroundMode="none"
         app:endIconMode="password_toggle"
         app:endIconTint="@color/white"
+        app:helperText="Text123458"
 
-        app:helperText="Text123"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Email_InputLayout"
-        app:startIconDrawable="@drawable/icon_lock"
+        app:layout_constraintTop_toBottomOf="@id/Email_Input"
+        app:startIconDrawable="@drawable/ic_lock_"
         app:startIconTint="@color/white">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
+            android:id="@+id/et_password_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rounder_bourder"
             android:gravity="center_vertical"
             android:hint="Password"
             android:inputType="textPassword"
-            android:maxLength="20"
+            android:maxLength="40"
             android:maxLines="1"
-
+            android:paddingEnd="40dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:textColor="@color/black"
 
-            android:textSize="22sp"
+            android:textSize="16sp"
 
 
-            app:textInputLayoutFocusedRectEnabled="true" />
+            app:textInputLayoutFocusedRectEnabled="true"
+            tools:ignore="HardcodedText" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -129,15 +132,16 @@
         android:gravity="center"
         android:text="Login"
         android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@id/Password_InputLayout" />
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/Password_Input"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/forget_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/picolafont"
+        android:fontFamily="@font/visby"
         android:text="Forget Password?"
         android:textColor="@color/blue"
         android:textSize="25sp"
@@ -145,36 +149,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/login_Button"
 
-        />
+        tools:ignore="HardcodedText" />
 
     <TextView
-        android:id="@+id/SignIn"
+        android:id="@+id/SignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/picolafont"
+        android:fontFamily="@font/visby_heavy"
         android:text="Sign Up"
         android:textColor="@color/blue"
-        android:layout_marginTop="50dp"
-        android:textSize="22sp"
+        android:layout_marginTop="80dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/donotHaveAnAccount"
-        app:layout_constraintTop_toBottomOf="@+id/forget_password" />
+        app:layout_constraintTop_toBottomOf="@+id/forget_password"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/donotHaveAnAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/picolafont"
+        android:fontFamily="@font/visby"
         android:textColor="#BEBDBD"
-        android:text="Don't have an account ? "
-        android:layout_marginTop="50dp"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toStartOf="@+id/SignIn"
+        android:text="Donot have an account ? "
+        android:layout_marginTop="80dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/SignUp"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/forget_password" />
+        app:layout_constraintTop_toBottomOf="@+id/forget_password"
+        tools:ignore="HardcodedText" />
 
     <!--<Button
         android:id="@+id/SignUp_button"

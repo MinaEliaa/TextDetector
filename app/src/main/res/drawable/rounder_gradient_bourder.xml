@@ -3,8 +3,12 @@
     <gradient
 
         android:startColor="#2C00FF"
+        android:gradientRadius="@dimen/fab_margin"
     android:endColor="#051CAF"
-    android:angle="180"/>
+
+    android:angle="180"
+
+        />
 
     <corners android:radius="200dp"/>
 </shape>
