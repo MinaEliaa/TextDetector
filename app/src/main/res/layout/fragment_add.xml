@@ -1,9 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".ui.home.fragments.AddFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <EditText
+            android:id="@+id/et_TypeTweet"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="148dp"
+            android:background="@drawable/type_tweet_rounder_bourder"
+            android:hint="Type The Tweet.."
+            android:maxLength="600"
+            android:maxLines="1"
+
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="40dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:textInputLayoutFocusedRectEnabled="true" />
+
+        <Button
+            android:id="@+id/showResults_button"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounder_gradient_bourder"
+            android:fontFamily="@font/arial_bold"
+            android:gravity="center"
+            android:text="Show Results"
+            android:layout_marginTop="150dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_TypeTweet" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </FrameLayout>

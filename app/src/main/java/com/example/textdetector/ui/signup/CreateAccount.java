@@ -30,6 +30,7 @@ public class CreateAccount extends AppCompatActivity {
     EditText inputUsername, inputEmail, inputPassword, inputConfirmPassword;
     private FirebaseAuth mAuth;
     String email,password;
+    public static String username;
 
 
     @Override
@@ -63,6 +64,7 @@ public class CreateAccount extends AppCompatActivity {
             public void onClick(View view) {
                 email = inputEmail.getText().toString();
                 password = inputPassword.getText().toString();
+                username = inputUsername.getText().toString();
                // Log.d("email", "onCreate: "+email + password);
                 //checkCredentials();
                 if(checkCredentials())
@@ -74,7 +76,9 @@ public class CreateAccount extends AppCompatActivity {
                                     LoginToast();
                                     FirebaseUser user = mAuth.getCurrentUser();
                                     Intent i = new Intent(CreateAccount.this, HomeActivity.class);
+                                    i.putExtra("userName",username);
                                     startActivity(i);
+
                                 } else {
                                     // If sign in fails, display a message to the user.
                                 }
@@ -82,6 +86,8 @@ public class CreateAccount extends AppCompatActivity {
                         });
             }
         });
+
+
 
 
         signinBtn.setOnClickListener
