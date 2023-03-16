@@ -20,7 +20,7 @@ class ArchiveFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_archive, container, false)
-        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
+        val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
         recyclerView.adapter = ProgressAdapter(getProgressItems()) // Replace getProgressItems() with your own function to get the list of ProgressItems.
         recyclerView.layoutManager = LinearLayoutManager(context)
         return view
