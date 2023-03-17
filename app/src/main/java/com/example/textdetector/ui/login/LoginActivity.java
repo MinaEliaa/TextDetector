@@ -26,21 +26,19 @@ import com.google.firebase.auth.FirebaseUser;
 public class LoginActivity extends AppCompatActivity {
 
 
-    private ProgressBar progressBar ;
+    private ProgressBar progressBar;
     TextView signUpBtn;
     TextView forgetPasswordBtn;
     Button loginBtn;
-    EditText inputEmail, inputPassword;
+    EditText inputEmail, inputPassword ;
     private FirebaseAuth mAuth;
+    public static String username;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-
-
 
 
         signUpBtn = findViewById(R.id.SignUp);
@@ -51,12 +49,14 @@ public class LoginActivity extends AppCompatActivity {
         inputPassword = (EditText) findViewById(R.id.et_password_login);
         mAuth = FirebaseAuth.getInstance();
 
+
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 String email = inputEmail.getText().toString();
                 String password = inputPassword.getText().toString();
+
                 if (checkCredentials()) {
                     mAuth.signInWithEmailAndPassword(email, password)
                             .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
@@ -64,9 +64,11 @@ public class LoginActivity extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
                                         LoginToast();
+
                                         FirebaseUser user = mAuth.getCurrentUser();
                                         Intent i = new Intent(LoginActivity.this, HomeActivity.class);
                                         startActivity(i);
+
                                     } else {
 
                                     }
@@ -93,7 +95,6 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-
     private Boolean checkCredentials() {
         Boolean isVaild = true;
         String email = inputEmail.getText().toString();
@@ -113,23 +114,19 @@ public class LoginActivity extends AppCompatActivity {
         return isVaild;
     }
 
-
-
     private void showError(EditText input, String s) {
         input.setError(s);
         input.requestFocus();
     }
 
-    private void LoginToast(){
-        LayoutInflater inflater=getLayoutInflater();
-        View view = inflater.inflate(R.layout.login_successful_toast,this.findViewById(R.id.Toast_login));
+    private void LoginToast() {
+        LayoutInflater inflater = getLayoutInflater();
+        View view = inflater.inflate(R.layout.login_successful_toast, this.findViewById(R.id.Toast_login));
         Toast toast = new Toast(this);
         toast.setDuration(Toast.LENGTH_SHORT);
         toast.setView(view);
         toast.show();
     }
-
-
 
 
 }
