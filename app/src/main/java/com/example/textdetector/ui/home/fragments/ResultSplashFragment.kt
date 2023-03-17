@@ -34,7 +34,8 @@ class ResultSplashFragment : Fragment() {
         // Create a Handler to navigate to the ResultFragment after 2 seconds
         Handler(Looper.getMainLooper()).postDelayed({
             val resultFragment = ResultFragment()
-            parentFragmentManager.beginTransaction()
+            parentFragmentManager
+                .beginTransaction()
                 .replace(R.id.fragment_contanier, resultFragment)
                 .commit()
 
@@ -42,8 +43,6 @@ class ResultSplashFragment : Fragment() {
 
         return view
     }
-
-
 
 
 }

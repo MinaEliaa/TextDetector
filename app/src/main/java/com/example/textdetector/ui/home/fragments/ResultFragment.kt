@@ -18,7 +18,6 @@ class ResultFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
 
-
     }
 
     override fun onCreateView(
