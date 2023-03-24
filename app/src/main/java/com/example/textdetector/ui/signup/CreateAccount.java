@@ -106,7 +106,7 @@ public class CreateAccount extends AppCompatActivity {
         String password = inputPassword.getText().toString();
         String confirmpassword = inputConfirmPassword.getText().toString();
 
-        if (username.isEmpty() ) {
+        if (username.isEmpty()  ) {
             showError(inputUsername, "your username is not valid");
             isValid = false ;
 
@@ -114,13 +114,19 @@ public class CreateAccount extends AppCompatActivity {
             showError(inputUsername, "username must not exceed 15");
             isValid = false ;
         }
-        else if (email.isEmpty() || !email.contains("@")) {
+        else if (email.isEmpty() || !email.contains(".") || !email.contains("@")  ) {
             showError(inputEmail, "Email is not valid");
             isValid = false ;
-        } else if (password.isEmpty() || password.length() < 10) {
-            showError(inputPassword, "Password more than 9");
+
+        }
+//          else if (password.isEmpty() ) {
+//            showError(inputPassword, "Password is not valid");
+//            isValid = false ;
+//        }
+        else if ( password.length() < 10) {
+            showError(inputPassword, "Password must more than 9");
             isValid = false ;
-        } else if (confirmpassword.isEmpty() || !confirmpassword.equals(password)) {
+        }else if (confirmpassword.isEmpty() || !confirmpassword.equals(password)) {
             showError(inputConfirmPassword, "Password not match");
             isValid = false ;
         } else {
