@@ -1,10 +1,12 @@
-package com.example.textdetector
+package com.example.textdetector.ui.splash
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import com.example.textdetector.ui.login.LoginActivity
+import com.example.textdetector.R
 
 class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -4,6 +4,13 @@
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="blue">#2C00FF</color>
+
+    <color name="redProgess">#F30707</color>
+    <color name="blueProgess">#4821FE</color>
+    <color name="yellowProgess">#FFC300</color>
+
+
+
     <color name="bluedark">#051CAF</color>
     <color name ="colorTransparent">#00000000</color>
     <color name="purple_700">#FF3700B3</color>

@@ -1,4 +1,4 @@
-package com.example.textdetector;
+package com.example.textdetector.ui.forgetpassword;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.textdetector.R;
+import com.example.textdetector.ui.login.LoginActivity;
 
 public class ForgetPassword extends AppCompatActivity {
 
@@ -21,7 +24,7 @@ public class ForgetPassword extends AppCompatActivity {
         BackBlueArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ForgetPassword.this,LoginActivity.class));
+                startActivity(new Intent(ForgetPassword.this, LoginActivity.class));
             }
         });
 

@@ -20,23 +20,23 @@
             android:exported="false"
             android:label="@string/title_activity_original" />
         <activity
-            android:name=".CreateAccount"
+            android:name=".ui.signup.CreateAccount"
             android:exported="false"
             android:label="@string/title_activity_create_account"
-            android:parentActivityName=".LoginActivity"
+            android:parentActivityName=".ui.login.LoginActivity"
             android:theme="@style/Theme.TextDetector.NoActionBar" />
         <activity
-            android:name=".ForgetPassword"
+            android:name=".ui.forgetpassword.ForgetPassword"
             android:exported="false"
             android:label="@string/title_activity_forget_password"
-            android:parentActivityName=".LoginActivity"
+            android:parentActivityName=".ui.login.LoginActivity"
             android:theme="@style/Theme.TextDetector.NoActionBar" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.login.LoginActivity"
             android:exported="false"
             android:theme="@style/noActionbar" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".ui.splash.SplashScreen"
             android:exported="true"
             android:theme="@style/noActionbar" >
             <intent-filter>
@@ -46,7 +46,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".HomeActivity"
+            android:name=".ui.home.HomeActivity"
             android:exported="true"
             android:theme="@style/noActionbar" >
             <intent-filter>

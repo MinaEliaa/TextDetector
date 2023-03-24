@@ -1,4 +1,4 @@
-package com.example.textdetector;
+package com.example.textdetector.ui.signup;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.textdetector.R;
+import com.example.textdetector.ui.home.HomeActivity;
+import com.example.textdetector.ui.login.LoginActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -27,6 +30,7 @@ public class CreateAccount extends AppCompatActivity {
     EditText inputUsername, inputEmail, inputPassword, inputConfirmPassword;
     private FirebaseAuth mAuth;
     String email,password;
+    public static String username;
 
 
     @Override
@@ -51,7 +55,7 @@ public class CreateAccount extends AppCompatActivity {
         BackBlueArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(CreateAccount.this,LoginActivity.class));
+                startActivity(new Intent(CreateAccount.this, LoginActivity.class));
             }
         });
         createAccountBtn.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +64,7 @@ public class CreateAccount extends AppCompatActivity {
             public void onClick(View view) {
                 email = inputEmail.getText().toString();
                 password = inputPassword.getText().toString();
+                username = inputUsername.getText().toString();
                // Log.d("email", "onCreate: "+email + password);
                 //checkCredentials();
                 if(checkCredentials())
@@ -70,8 +75,11 @@ public class CreateAccount extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     LoginToast();
                                     FirebaseUser user = mAuth.getCurrentUser();
-                                    Intent i = new Intent(CreateAccount.this,HomeActivity.class);
+                                    Intent i = new Intent(CreateAccount.this, HomeActivity.class);
+                                    i.putExtra("userName",username);
                                     startActivity(i);
+
+
                                 } else {
                                     // If sign in fails, display a message to the user.
                                 }
@@ -79,6 +87,8 @@ public class CreateAccount extends AppCompatActivity {
                         });
             }
         });
+
+
 
 
         signinBtn.setOnClickListener
@@ -96,16 +106,27 @@ public class CreateAccount extends AppCompatActivity {
         String password = inputPassword.getText().toString();
         String confirmpassword = inputConfirmPassword.getText().toString();
 
-        if (username.isEmpty() ) {
+        if (username.isEmpty()  ) {
             showError(inputUsername, "your username is not valid");
             isValid = false ;
-        } else if (email.isEmpty() || !email.contains("@")) {
+
+        } else if (username.length() > 15){
+            showError(inputUsername, "username must not exceed 15");
+            isValid = false ;
+        }
+        else if (email.isEmpty() || !email.contains(".") || !email.contains("@")  ) {
             showError(inputEmail, "Email is not valid");
             isValid = false ;
-        } else if (password.isEmpty() || password.length() < 10) {
-            showError(inputPassword, "Password more than 9");
+
+        }
+//          else if (password.isEmpty() ) {
+//            showError(inputPassword, "Password is not valid");
+//            isValid = false ;
+//        }
+        else if ( password.length() < 10) {
+            showError(inputPassword, "Password must more than 9");
             isValid = false ;
-        } else if (confirmpassword.isEmpty() || !confirmpassword.equals(password)) {
+        }else if (confirmpassword.isEmpty() || !confirmpassword.equals(password)) {
             showError(inputConfirmPassword, "Password not match");
             isValid = false ;
         } else {
