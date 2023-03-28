@@ -98,7 +98,7 @@
         app:endIconMode="password_toggle"
 
         app:endIconTint="@color/blue"
-
+        android:layout_marginTop="5dp"
         app:helperTextTextColor="@color/greylight"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

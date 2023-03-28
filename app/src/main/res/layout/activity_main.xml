@@ -29,7 +29,7 @@
                 android:layout_margin="20dp"
                 android:paddingBottom="15dp"
                 android:src="@drawable/kebab_menu_blue"
-                app:tint="@color/black" />
+                app:tint="@color/bluedark" />
 
         </androidx.appcompat.widget.Toolbar>
 
