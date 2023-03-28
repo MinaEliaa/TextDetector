@@ -13,6 +13,7 @@
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/finalprogressbar.xml" value="0.136" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/firstprogressbar.xml" value="0.1125" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/forthprogressbar.xml" value="0.1845" />
+        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/gradient.xml" value="0.228" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/gradient_color.xml" value="0.1" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/hatespeech_bourder.xml" value="0.1" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.1815" />
@@ -39,9 +40,9 @@
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/type_tweet_rounder_bourder.xml" value="0.182" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/types_in_home_bourder.xml" value="0.191" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout-land/activity_main.xml" value="0.43963963963963965" />
-        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/activity_create_account.xml" value="0.23236514522821577" />
-        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/activity_forget_password.xml" value="0.4" />
-        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/activity_create_account.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/activity_forget_password.xml" value="0.264" />
+        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/activity_original.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/activity_splash_screen.xml" value="0.25416666666666665" />
@@ -52,9 +53,10 @@
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/fragment_item.xml" value="0.2296875" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/fragment_item_list.xml" value="0.2296875" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/fragment_notifications.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/fragment_result.xml" value="0.1" />
+        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/fragment_result.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/fragment_result_.xml" value="0.2265625" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/fragment_result__splash.xml" value="0.2265625" />
+        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/fragment_resultsplash.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/fragment_welcome.xml" value="0.2296875" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/item_progress.xml" value="0.264" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/login_error_toast.xml" value="0.264" />
