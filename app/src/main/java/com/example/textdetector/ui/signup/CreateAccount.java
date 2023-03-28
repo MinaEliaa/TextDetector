@@ -2,6 +2,8 @@ package com.example.textdetector.ui.signup;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +20,7 @@ import com.example.textdetector.ui.home.HomeActivity;
 import com.example.textdetector.ui.login.LoginActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -50,6 +53,55 @@ public class CreateAccount extends AppCompatActivity {
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
+        // Hide password toggle icon by default
+        TextInputLayout passwordInput = findViewById(R.id.Password_Input);
+        passwordInput.setEndIconVisible(false);
+        TextInputLayout confirmpasswordInput = findViewById(R.id.ConfirmPassword_InputLayout);
+        confirmpasswordInput.setEndIconVisible(false);
+
+        // Show password toggle icon when password text is entered
+        inputPassword.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.length() > 0) {
+                    passwordInput.setEndIconVisible(true);
+
+                } else {
+                    passwordInput.setEndIconVisible(false);
+
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        // Show password toggle icon when password text is entered
+        inputConfirmPassword.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.length() > 0) {
+                    confirmpasswordInput.setEndIconVisible(true);
+
+                } else {
+                    confirmpasswordInput.setEndIconVisible(false);
+
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
 
 
         BackBlueArrow.setOnClickListener(new View.OnClickListener() {

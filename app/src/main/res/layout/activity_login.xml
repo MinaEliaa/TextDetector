@@ -37,7 +37,7 @@
         android:paddingTop="80dp"
             android:text="Log In"
         android:textColor="@color/black"
-        android:textSize="30sp"
+        android:textSize="27sp"
         app:layout_constraintStart_toStartOf="@+id/Email_Input"
         app:layout_constraintTop_toBottomOf="@id/TextDetector_Label"
         tools:ignore="HardcodedText" />
