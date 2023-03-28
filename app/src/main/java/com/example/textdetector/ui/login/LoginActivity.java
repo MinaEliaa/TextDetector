@@ -2,6 +2,8 @@ package com.example.textdetector.ui.login;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +21,7 @@ import com.example.textdetector.ui.home.HomeActivity;
 import com.example.textdetector.ui.signup.CreateAccount;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -44,10 +47,33 @@ public class LoginActivity extends AppCompatActivity {
         signUpBtn = findViewById(R.id.SignUp);
         forgetPasswordBtn = findViewById(R.id.forget_password);
         loginBtn = findViewById(R.id.login_Button);
-
         inputEmail = (EditText) findViewById(R.id.et_email_login);
         inputPassword = (EditText) findViewById(R.id.et_password_login);
+
         mAuth = FirebaseAuth.getInstance();
+        // Hide password toggle icon by default
+        TextInputLayout passwordInput = findViewById(R.id.Password_Input);
+        passwordInput.setEndIconVisible(false);
+
+        // Show password toggle icon when password text is entered
+        inputPassword.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.length() > 0) {
+                    passwordInput.setEndIconVisible(true);
+                } else {
+                    passwordInput.setEndIconVisible(false);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
 
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
@@ -127,6 +153,7 @@ public class LoginActivity extends AppCompatActivity {
         toast.setView(view);
         toast.show();
     }
+
 
 
 }
