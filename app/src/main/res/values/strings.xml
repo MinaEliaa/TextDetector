@@ -18,6 +18,12 @@
     <string name="Home">Home</string>
     <string name="Add">Add</string>
     <string name="Archive">Archive</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <!-- Strings for facebook login -->
+
+    <string name="facebook_app_id">541655041348637</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">f7a15bdc04d4634c32029edc79a42360</string>
+
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
