@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/number_text_view"
-        android:fontFamily="@font/helvetica"
+        android:fontFamily="@font/visby_demibold"
         android:text="Hate Tweet"
         app:layout_constraintStart_toEndOf="@id/progress_bar"
         app:layout_constraintTop_toTopOf="parent"
@@ -58,9 +58,10 @@
 
     <TextView
         android:id="@+id/text2_text_view"
-        android:layout_width="wrap_content"
+        android:layout_width="210dp"
         android:layout_height="0dp"
-        android:fontFamily="@font/helvetica"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/visby_demibold"
         android:textSize="20sp"
         android:textColor="@color/grey"
         android:text="Hi , I am learning NLP..."

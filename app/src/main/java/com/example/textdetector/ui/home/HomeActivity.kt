@@ -7,21 +7,24 @@ import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.example.textdetector.ui.login.LoginActivity
 import com.example.textdetector.R
 import com.example.textdetector.ui.home.fragments.AddFragment
-import com.example.textdetector.ui.home.fragments.archive.ArchiveFragment
 import com.example.textdetector.ui.home.fragments.HomeFragment
+import com.example.textdetector.ui.home.fragments.archive.ArchiveFragment
+import com.example.textdetector.ui.login.LoginActivity
+import com.facebook.AccessToken
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+
 
 class HomeActivity : AppCompatActivity() {
 
     lateinit var bottoNavigation:BottomNavigationView
     lateinit var menuu: ImageView
     lateinit var mAuth:FirebaseAuth
+    var accessToken: AccessToken? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -57,8 +60,9 @@ class HomeActivity : AppCompatActivity() {
         })
 
         mAuth = FirebaseAuth.getInstance()
+        accessToken = AccessToken.getCurrentAccessToken();
         val currentUser: FirebaseUser? = mAuth.getCurrentUser()
-        if (currentUser == null) {
+        if (currentUser == null && accessToken == null) {
             val i = Intent(this@HomeActivity, LoginActivity::class.java)
             startActivity(i)
         }

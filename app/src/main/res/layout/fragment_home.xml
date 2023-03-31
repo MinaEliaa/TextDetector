@@ -15,6 +15,7 @@
         android:layout_height="match_parent">
 
 
+
         <TextView
 
             android:id="@+id/UserName_EditText"
@@ -130,7 +131,7 @@
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/bourder_hatespeech"
             app:layout_constraintStart_toStartOf="@id/Hey"
             app:layout_constraintTop_toBottomOf="@id/progressbar1" />
