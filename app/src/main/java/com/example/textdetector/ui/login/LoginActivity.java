@@ -125,6 +125,8 @@ public class LoginActivity extends AppCompatActivity {
 
                                     } else {
 
+                                        UnSuccessfulLoginToast();
+
                                     }
                                 }
                             });
@@ -195,6 +197,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onError(FacebookException exception) {
                         // App code
+                        UnSuccessfulLoginToast();
                     }
                 });
     }
@@ -232,6 +235,14 @@ public class LoginActivity extends AppCompatActivity {
     private void LoginToast() {
         LayoutInflater inflater = getLayoutInflater();
         View view = inflater.inflate(R.layout.login_successful_toast, this.findViewById(R.id.Toast_login));
+        Toast toast = new Toast(this);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setView(view);
+        toast.show();
+    }
+    private void UnSuccessfulLoginToast() {
+        LayoutInflater inflater = getLayoutInflater();
+        View view = inflater.inflate(R.layout.login_unsuccessful_toast, this.findViewById(R.id.Toast_login));
         Toast toast = new Toast(this);
         toast.setDuration(Toast.LENGTH_SHORT);
         toast.setView(view);
