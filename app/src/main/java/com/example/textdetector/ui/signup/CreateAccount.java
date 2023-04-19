@@ -11,10 +11,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.textdetector.R;
 import com.example.textdetector.ui.home.HomeActivity;
 import com.example.textdetector.ui.login.LoginActivity;
