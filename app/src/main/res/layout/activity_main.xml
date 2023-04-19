@@ -7,6 +7,7 @@
     android:background="@color/white"
     tools:context=".ui.signup.CreateAccount"
 
+
     >
 
     <com.google.android.material.appbar.AppBarLayout
@@ -29,7 +30,7 @@
                 android:layout_margin="20dp"
                 android:paddingBottom="15dp"
                 android:src="@drawable/kebab_menu_blue"
-                app:tint="@color/black" />
+                app:tint="@color/bluedark" />
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -56,6 +57,7 @@
             app:itemTextColor="@color/bottom_nav_bar_color_select"
             app:layout_constraintBottom_toBottomOf="parent"
             app:menu="@menu/home_nav_menu"
+
 
             />
 

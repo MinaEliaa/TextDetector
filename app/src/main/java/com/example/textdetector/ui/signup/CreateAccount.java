@@ -2,6 +2,8 @@ package com.example.textdetector.ui.signup;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -9,15 +11,14 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.textdetector.R;
 import com.example.textdetector.ui.home.HomeActivity;
 import com.example.textdetector.ui.login.LoginActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -50,6 +51,55 @@ public class CreateAccount extends AppCompatActivity {
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
+        // Hide password toggle icon by default
+        TextInputLayout passwordInput = findViewById(R.id.Password_Input);
+        passwordInput.setEndIconVisible(false);
+        TextInputLayout confirmpasswordInput = findViewById(R.id.ConfirmPassword_InputLayout);
+        confirmpasswordInput.setEndIconVisible(false);
+
+        // Show password toggle icon when password text is entered
+        inputPassword.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.length() > 0) {
+                    passwordInput.setEndIconVisible(true);
+
+                } else {
+                    passwordInput.setEndIconVisible(false);
+
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        // Show password toggle icon when password text is entered
+        inputConfirmPassword.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.length() > 0) {
+                    confirmpasswordInput.setEndIconVisible(true);
+
+                } else {
+                    confirmpasswordInput.setEndIconVisible(false);
+
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
 
 
         BackBlueArrow.setOnClickListener(new View.OnClickListener() {
@@ -106,7 +156,7 @@ public class CreateAccount extends AppCompatActivity {
         String password = inputPassword.getText().toString();
         String confirmpassword = inputConfirmPassword.getText().toString();
 
-        if (username.isEmpty() ) {
+        if (username.isEmpty()  ) {
             showError(inputUsername, "your username is not valid");
             isValid = false ;
 
@@ -114,13 +164,19 @@ public class CreateAccount extends AppCompatActivity {
             showError(inputUsername, "username must not exceed 15");
             isValid = false ;
         }
-        else if (email.isEmpty() || !email.contains("@")) {
+        else if (email.isEmpty() || !email.contains(".") || !email.contains("@")  ) {
             showError(inputEmail, "Email is not valid");
             isValid = false ;
-        } else if (password.isEmpty() || password.length() < 10) {
-            showError(inputPassword, "Password more than 9");
+
+        }
+//          else if (password.isEmpty() ) {
+//            showError(inputPassword, "Password is not valid");
+//            isValid = false ;
+//        }
+        else if ( password.length() < 10) {
+            showError(inputPassword, "Password must more than 9");
             isValid = false ;
-        } else if (confirmpassword.isEmpty() || !confirmpassword.equals(password)) {
+        }else if (confirmpassword.isEmpty() || !confirmpassword.equals(password)) {
             showError(inputConfirmPassword, "Password not match");
             isValid = false ;
         } else {

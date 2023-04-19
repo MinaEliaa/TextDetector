@@ -15,6 +15,7 @@
         android:layout_height="match_parent">
 
 
+
         <TextView
 
             android:id="@+id/UserName_EditText"
@@ -22,7 +23,9 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/visby"
             android:paddingStart="5dp"
+            app:layout_constraintTop_toTopOf="parent"
             android:text="Mina Elia Louise"
+            android:paddingTop="10dp"
             android:textColor="@color/black"
             android:textSize="30sp"
             app:layout_constraintStart_toEndOf="@id/Hey"
@@ -37,6 +40,9 @@
             android:fontFamily="@font/visby"
             android:paddingStart="20dp"
             android:text="Hey,"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             android:textColor="@color/black"
             android:textSize="30sp"
             tools:ignore="MissingConstraints"
@@ -51,6 +57,7 @@
             android:fontFamily="@font/visby_regular"
             android:paddingStart="20dp"
             android:paddingTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
             android:text="Press Add To Start"
             android:textColor="#BEBDBD"
             android:textSize="28sp"
@@ -148,7 +155,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="40dp"
             android:text="0%"
-
+            android:textColor="#BEBDBD"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="@id/first_language_label"
             app:layout_constraintEnd_toEndOf="parent"
@@ -193,7 +200,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="40dp"
             android:text="0%"
-
+            android:textColor="#BEBDBD"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="@id/second_language_label"
             app:layout_constraintEnd_toEndOf="parent"
@@ -238,7 +245,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="40dp"
             android:text="0%"
-
+            android:textColor="#BEBDBD"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="@id/third_language_label"
             app:layout_constraintEnd_toEndOf="parent"
