@@ -68,11 +68,13 @@
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/login_successful_toast.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/login_unsuccessful_toast.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/logintoast.xml" value="0.264" />
+        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/network_security_config.xml" value="0.140625" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/toast.xml" value="0.253125" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/menu/example_menu.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/menu/home_nav_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/menu/popup_menu.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/xml/network_security_config.xml" value="0.14010416666666667" />
       </map>
     </option>
   </component>

@@ -9,7 +9,7 @@ import android.widget.Button
 import android.widget.EditText
 import com.example.textdetector.R
 import com.example.textdetector.ui.home.fragments.ResultSplashFragment
-import com.example.textdetector.ui.home.fragments.api.ApiService
+import com.example.textdetector.ui.home.fragments.api.ApiInterface
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -17,18 +17,12 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class AddFragment : Fragment() {
 
-    private lateinit var apiService: ApiService
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Initialize the Retrofit API service
-        val retrofit = Retrofit.Builder()
-            .baseUrl("http://127.0.0.1:5000/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
 
-        apiService = retrofit.create(ApiService::class.java)
 
 
             /*private val client = OkHttpClient.Builder().build()

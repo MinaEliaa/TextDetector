@@ -1,11 +1,10 @@
 package com.example.textdetector.ui.home.fragments.api
 
+import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.POST
 
-interface ApiService {
-
+interface ApiInterface {
     @POST("/predict")
-    suspend fun predict(@Body requestBody: Map<String, String>): PredictionResponse
-
+    fun sendReq(@Body requestModel: PredictionRequest) : Call<PredictionResponse>
 }
