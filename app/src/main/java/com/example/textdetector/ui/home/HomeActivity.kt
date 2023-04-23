@@ -40,7 +40,7 @@ class HomeActivity : AppCompatActivity() {
             else if (menuitem.itemId  == R.id.navigation_add){
                 supportFragmentManager
                     .beginTransaction()
-                    .replace(R.id.fragment_contanier,AddFragment())
+                    .replace(R.id.fragment_contanier, AddFragment())
                     .commit()
             }
             else if (menuitem.itemId == R.id.navigation_archive){
