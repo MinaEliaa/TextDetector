@@ -132,6 +132,8 @@ public class CreateAccount extends AppCompatActivity {
 
                                 } else {
                                     // If sign in fails, display a message to the user.
+                                    UnSuccessfulLoginToast();
+
                                 }
                             }
                         });
@@ -198,6 +200,14 @@ public class CreateAccount extends AppCompatActivity {
     private void showError(EditText input, String s) {
         input.setError(s);
         input.requestFocus();
+    }
+    private void UnSuccessfulLoginToast() {
+        LayoutInflater inflater = getLayoutInflater();
+        View view = inflater.inflate(R.layout.login_unsuccessful_toast, this.findViewById(R.id.Toast_login));
+        Toast toast = new Toast(this);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setView(view);
+        toast.show();
     }
 
 
