@@ -22,7 +22,6 @@
             android:hint="Type The Tweet.."
             android:maxLength="600"
             android:maxLines="1"
-
             android:paddingStart="20dp"
             android:paddingTop="10dp"
             android:paddingEnd="40dp"

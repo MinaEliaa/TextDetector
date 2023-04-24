@@ -40,7 +40,13 @@ class AddFragment : Fragment() {
                     .addToBackStack(null)
                     .commit()
             } else {
-                Toast.makeText(requireContext(), "Tweet must have more than 2 words", Toast.LENGTH_SHORT).show()
+                val inflater = requireActivity().layoutInflater
+                val layout = inflater.inflate(R.layout.add_tweet_unsuccessful_toast, null)
+                val toast = Toast(requireContext())
+                toast.duration = Toast.LENGTH_SHORT
+                toast.view = layout
+                toast.show()
+//                Toast.makeText(requireContext(), "Tweet must have more than 2 words", Toast.LENGTH_SHORT).show()
             }
         }
 

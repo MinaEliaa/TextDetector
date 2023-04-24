@@ -22,22 +22,12 @@ import com.example.textdetector.ui.home.HomeActivity;
 import com.example.textdetector.ui.signup.CreateAccount;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
-import com.facebook.FacebookCallback;
-import com.facebook.FacebookException;
-import com.facebook.GraphRequest;
-import com.facebook.GraphResponse;
-import com.facebook.login.LoginManager;
-import com.facebook.login.LoginResult;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
-import org.json.JSONObject;
-
-import java.util.Arrays;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -66,7 +56,7 @@ public class LoginActivity extends AppCompatActivity {
         loginBtn = findViewById(R.id.login_Button);
         inputEmail = (EditText) findViewById(R.id.et_email_login);
         inputPassword = (EditText) findViewById(R.id.et_password_login);
-        fbBtn = findViewById(R.id.facebook_logo);
+        /*fbBtn = findViewById(R.id.facebook_logo);
         fbBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,9 +65,9 @@ public class LoginActivity extends AppCompatActivity {
                 LoginManager.getInstance().logInWithReadPermissions(LoginActivity.this, Arrays.asList("public_profile"));
 
             }
-        });
+        });*/
 
-        facebookSignIn();
+        /*facebookSignIn();*/
         mAuth = FirebaseAuth.getInstance();
         // Hide password toggle icon by default
         TextInputLayout passwordInput = findViewById(R.id.Password_Input);
@@ -160,7 +150,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    void facebookSignIn() {
+    /*void facebookSignIn() {
         callbackManager = CallbackManager.Factory.create();
         LoginManager.getInstance().registerCallback(callbackManager,
                 new FacebookCallback<LoginResult>() {
@@ -200,7 +190,7 @@ public class LoginActivity extends AppCompatActivity {
                         UnSuccessfulLoginToast();
                     }
                 });
-    }
+    }*/
 
     private void Onseccess() {
         LoginToast();
