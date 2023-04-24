@@ -39,7 +39,7 @@
             android:text="HATE TWEET"
             android:fontFamily="@font/helvetica"
             android:textColor="#BEBDBD"
-            android:textSize="35sp"
+            android:textSize="32sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
