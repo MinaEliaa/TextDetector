@@ -37,11 +37,11 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val userNameEt :TextView
+        /*val userNameEt :TextView
         userNameEt = requireActivity().findViewById(R.id.UserName_EditText)
         val userName  = requireActivity().intent.getStringExtra("userName")
 
-        userNameEt.setText("$userName")
+        userNameEt.setText("$userName")*/
 
         }
 

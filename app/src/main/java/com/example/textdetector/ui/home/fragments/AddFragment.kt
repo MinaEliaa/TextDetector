@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import com.example.textdetector.R
 import com.example.textdetector.ui.home.fragments.ResultSplashFragment
@@ -18,18 +19,36 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class AddFragment : Fragment() {
 
+    private lateinit var arrow: ImageView
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        arrow = view.findViewById(R.id.backarrow)
+
+        arrow.setOnClickListener {
+            val homeFragment = HomeFragment()
+            val fragmentManager = requireActivity().supportFragmentManager
+            fragmentManager.beginTransaction()
+                .replace(R.id.fragment_contanier, homeFragment)
+                .addToBackStack(null)
+                .commit()
+        }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_add, container, false)
 
+
         val etTypeTweet = view.findViewById<EditText>(R.id.et_TypeTweet)
         val showResultsButton = view.findViewById<Button>(R.id.showResults_button)
         showResultsButton.setOnClickListener {
             val tweet = etTypeTweet.text.toString()
             val words = tweet.split(" ")
-            if (words.size > 2) {
+            if (words.size == 2) {
                 val resultFragment = ResultFragment()
                 val bundle = Bundle()
                 bundle.putString("tweet", tweet)

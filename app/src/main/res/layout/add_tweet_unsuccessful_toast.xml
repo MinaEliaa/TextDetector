@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="350dp"
+    android:layout_width="320dp"
     android:layout_height="30dp"
     android:id="@+id/Toast_login"
     android:background="@drawable/toasterror"
@@ -35,7 +35,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/arial_bold"
-            android:text="TWEET MUST MORE THAN 2 WORDS"
+            android:text="TWEET MUST MORE THAN 1 WORD"
             android:textColor="@color/white"
             android:textSize="14sp" />
 

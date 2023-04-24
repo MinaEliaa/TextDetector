@@ -36,6 +36,7 @@ class HomeActivity : AppCompatActivity() {
                     .beginTransaction()
                     .replace(R.id.fragment_contanier,HomeFragment())
                     .commit()
+
             }
             else if (menuitem.itemId  == R.id.navigation_add){
                 supportFragmentManager

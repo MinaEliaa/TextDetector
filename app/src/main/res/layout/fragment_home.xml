@@ -16,7 +16,7 @@
 
 
 
-        <TextView
+        <!--<TextView
 
             android:id="@+id/UserName_EditText"
             android:layout_width="wrap_content"
@@ -24,14 +24,14 @@
             android:fontFamily="@font/visby"
             android:paddingStart="5dp"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="Mina Elia Louise"
+            android:text=""
             android:paddingTop="10dp"
             android:textColor="@color/black"
             android:textSize="30sp"
             app:layout_constraintStart_toEndOf="@id/Hey"
 
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="8dp" />
+            tools:layout_editor_absoluteY="8dp" />-->
 
         <TextView
             android:id="@+id/Hey"
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/visby"
             android:paddingStart="20dp"
-            android:text="Hey,"
+            android:text="Hey"
             android:layout_marginTop="10dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +61,7 @@
             android:text="Press Add To Start"
             android:textColor="#BEBDBD"
             android:textSize="28sp"
-            app:layout_constraintTop_toBottomOf="@id/UserName_EditText"
+            app:layout_constraintTop_toBottomOf="@id/Hey"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="0dp" />
 

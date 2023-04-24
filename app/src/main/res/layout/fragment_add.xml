@@ -50,7 +50,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_TypeTweet" />
 
+        <ImageView
+            android:id="@+id/backarrow"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:src="@drawable/ic_blue_arrow_back"
+            android:paddingTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="20dp"
 
+
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

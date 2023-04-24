@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.fragment.app.findFragment
 import com.example.textdetector.R
 import com.example.textdetector.ui.home.fragments.api.ApiInterface
 import com.example.textdetector.ui.home.fragments.api.PredictionRequest
@@ -19,6 +20,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import android.widget.ImageView as ImageView1
 
 
 class ResultFragment : Fragment() {
@@ -50,6 +52,9 @@ class ResultFragment : Fragment() {
         Log.d("antsh", "the Tweet: $tweet")
         // Create a PredictionRequest object with the tweet text
 
+        val labelTweet = requireView().findViewById<TextView>(R.id.tweet_type)
+
+
         val requestModel = tweet?.let { PredictionRequest(it) }
 
         // Make a POST request to the /predict endpoint
@@ -71,17 +76,26 @@ class ResultFragment : Fragment() {
                             "Neither" to neitherProb
                         )
 
-                        val sortedClassProbList = classProbList.sortedByDescending { it.second }
+                        val sortedClassProbList = classProbList.sortedByDescending {
+                            it.second?.removeSuffix("%")?.toDoubleOrNull() ?: 0.0
+                        }
+                        Log.d("Prediction", "Class label: $classLabel")
+                        sortedClassProbList.forEach { (label, prob) ->
+                            Log.d("Prediction", "$label probability: ${prob ?: "null"}%")
+                        }
+                        /*val sortedClassProbList = classProbList.sortedByDescending { it.second }
                         Log.d("Prediction", "Class label: $classLabel")
                         sortedClassProbList.forEach { (label, prob) ->
                             Log.d("Prediction", "$label probability: $prob")
-                        }
+                        }*/
+
                         val classLabel1 = sortedClassProbList[0].first
                         val classProb1 = sortedClassProbList[0].second
                         val classLabel2 = sortedClassProbList[1].first
                         val classProb2 = sortedClassProbList[1].second
                         val classLabel3 = sortedClassProbList[2].first
                         val classProb3 = sortedClassProbList[2].second
+
 
                         //update the labels and its percentages
                         val label_one = view.findViewById<TextView>(R.id.first_label)
@@ -99,12 +113,7 @@ class ResultFragment : Fragment() {
                         val prob_three = view.findViewById<TextView>(R.id.third_percentage)
                         prob_three.text ="${classProb3}"
 
-                        /*Log.d("Prediction", "Class label: $classLabel1")
-                        Log.d("Prediction", "Class prob: $classProb1")
-                        Log.d("Prediction", "Class label: $classLabel2")
-                        Log.d("Prediction", "Class prob: $classProb2")
-                        Log.d("Prediction", "Class label: $classLabel3")
-                        Log.d("Prediction", "Class prob: $classProb3")*/
+
 
                         updateLabelTweetText(classLabel)
                         updatePercentages(classProb1,classProb2,classProb3)
@@ -112,6 +121,12 @@ class ResultFragment : Fragment() {
                         val percentageTextView = view.findViewById<TextView>(R.id.percentage)
                         percentageTextView.text = "${max}"
 
+                        Log.d("Prediction", "Class label: $classLabel1")
+                        Log.d("Prediction", "Class prob: $classProb1")
+                        Log.d("Prediction", "Class label: $classLabel2")
+                        Log.d("Prediction", "Class prob: $classProb2")
+                        Log.d("Prediction", "Class label: $classLabel3")
+                        Log.d("Prediction", "Class prob: $classProb3")
 
 
 
@@ -182,6 +197,8 @@ class ResultFragment : Fragment() {
             2 -> labelTweet.text = "NEITHER TWEET"
         }
     }
+
+
 
 
 }
