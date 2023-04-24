@@ -136,7 +136,7 @@
             app:layout_constraintStart_toStartOf="@id/Hey"
             app:layout_constraintTop_toBottomOf="@id/progressbar1" />
         <TextView
-            android:id="@+id/first_language_label"
+            android:id="@+id/first_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -150,16 +150,16 @@
 
             />
         <TextView
-            android:id="@+id/percentage_first"
+            android:id="@+id/first_percentage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="40dp"
             android:text="0%"
             android:textColor="#BEBDBD"
             android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="@id/first_language_label"
+            app:layout_constraintBottom_toBottomOf="@id/first_label"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/first_language_label" />
+            app:layout_constraintTop_toTopOf="@id/first_label" />
         <View
             android:id="@+id/first_line"
             android:layout_width="match_parent"
@@ -181,7 +181,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/first_square" />
         <TextView
-            android:id="@+id/second_language_label"
+            android:id="@+id/second_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -195,16 +195,16 @@
 
             />
         <TextView
-            android:id="@+id/percentage_second"
+            android:id="@+id/second_percentage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="40dp"
             android:text="0%"
             android:textColor="#BEBDBD"
             android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="@id/second_language_label"
+            app:layout_constraintBottom_toBottomOf="@id/second_label"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/second_language_label" />
+            app:layout_constraintTop_toTopOf="@id/second_label" />
         <View
             android:id="@+id/second_line"
             android:layout_width="match_parent"
@@ -226,7 +226,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/second_square" />
         <TextView
-            android:id="@+id/third_language_label"
+            android:id="@+id/third_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -240,16 +240,16 @@
 
             />
         <TextView
-            android:id="@+id/percentage_third"
+            android:id="@+id/third_percentage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="40dp"
             android:text="0%"
             android:textColor="#BEBDBD"
             android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="@id/third_language_label"
+            app:layout_constraintBottom_toBottomOf="@id/third_label"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/third_language_label" />
+            app:layout_constraintTop_toTopOf="@id/third_label" />
 
 
 
