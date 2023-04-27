@@ -109,20 +109,4 @@ class HomeActivity : AppCompatActivity() {
 
     }
 
-//    private fun popmenu() {
-//        val popupMenu = PopupMenu(applicationContext,kebab_menu)
-//        popupMenu.inflate(R.menu.popup_menu)
-//        popupMenu.setOnMenuItemClickListener {
-//        when (it.itemId){
-//            R.id.nav_logout -> {
-//                FirebaseAuth.getInstance().signOut();
-//                val i = Intent(this@HomeActivity, LoginActivity::class.java)
-//                startActivity(i)
-//                true
-//            }
-//
-//            else -> {}
-//        }
-//        }
-//    }
 }

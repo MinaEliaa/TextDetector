@@ -27,6 +27,7 @@ class ArchiveFragment : Fragment() {
     }
 
     private fun getProgressItems(): List<ProgressItem> {
+
         // Replace this with your own function to get the list of ProgressItems.
         return listOf(
             ProgressItem("62%", "Hate Tweet", "Hi , I am learning NLP"),
@@ -41,6 +42,7 @@ class ArchiveFragment : Fragment() {
             ProgressItem("62%", "Hate Tweet", "Hi , I am learning NLP"),
             ProgressItem("75%", "Offensive Tweet", "Your message has a toxicity score of 75."),
             ProgressItem("100%", "Neither Tweet", "Your message is positive")
+
 
 
         )

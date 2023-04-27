@@ -230,6 +230,7 @@ public class LoginActivity extends AppCompatActivity {
         toast.setView(view);
         toast.show();
     }
+
     private void UnSuccessfulLoginToast() {
         LayoutInflater inflater = getLayoutInflater();
         View view = inflater.inflate(R.layout.login_unsuccessful_toast, this.findViewById(R.id.Toast_login));
@@ -238,5 +239,7 @@ public class LoginActivity extends AppCompatActivity {
         toast.setView(view);
         toast.show();
     }
+
+
 
 }

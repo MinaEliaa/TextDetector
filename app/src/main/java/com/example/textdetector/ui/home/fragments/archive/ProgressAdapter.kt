@@ -1,5 +1,6 @@
 package com.example.textdetector.ui.home.fragments.archive
 
+import android.animation.ObjectAnimator
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,6 +16,7 @@ class ProgressAdapter(private val items: List<ProgressItem>) : RecyclerView.Adap
         val numberTextView: TextView = itemView.findViewById(R.id.number_text_view)
         val text1TextView: TextView = itemView.findViewById(R.id.text1_text_view)
         val text2TextView: TextView = itemView.findViewById(R.id.text2_text_view)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -27,7 +29,9 @@ class ProgressAdapter(private val items: List<ProgressItem>) : RecyclerView.Adap
         holder.numberTextView.text = item.number
         holder.text1TextView.text = item.text1
         holder.text2TextView.text = item.text2
+
         // You can set the progress of the CircularProgressIndicator here as well if needed.
+
     }
 
     override fun getItemCount() = items.size

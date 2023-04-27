@@ -10,11 +10,6 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import com.example.textdetector.R
-import com.example.textdetector.ui.home.fragments.ResultSplashFragment
-import com.example.textdetector.ui.home.fragments.api.ApiInterface
-import okhttp3.OkHttpClient
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 
 class AddFragment : Fragment() {
@@ -28,8 +23,9 @@ class AddFragment : Fragment() {
 
         arrow.setOnClickListener {
             val homeFragment = HomeFragment()
-            val fragmentManager = requireActivity().supportFragmentManager
-            fragmentManager.beginTransaction()
+            val fragmentManager = requireActivity()
+                .supportFragmentManager
+                fragmentManager.beginTransaction()
                 .replace(R.id.fragment_contanier, homeFragment)
                 .addToBackStack(null)
                 .commit()
@@ -48,12 +44,13 @@ class AddFragment : Fragment() {
         showResultsButton.setOnClickListener {
             val tweet = etTypeTweet.text.toString()
             val words = tweet.split(" ")
-            if (words.size == 2) {
+            if (words.size > 1) {
                 val resultFragment = ResultFragment()
                 val bundle = Bundle()
                 bundle.putString("tweet", tweet)
                 resultFragment.arguments = bundle
-                val fragmentManager = requireActivity().supportFragmentManager
+                val fragmentManager = requireActivity()
+                    .supportFragmentManager
                 fragmentManager.beginTransaction()
                     .replace(R.id.fragment_contanier, resultFragment)
                     .addToBackStack(null)
