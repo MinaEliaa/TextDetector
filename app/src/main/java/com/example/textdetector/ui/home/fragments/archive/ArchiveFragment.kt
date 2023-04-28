@@ -10,9 +10,12 @@ import androidx.recyclerview.widget.RecyclerView
 
 
 import com.example.textdetector.R
+import com.example.textdetector.ui.database.MyDatabase
 
 
 class ArchiveFragment : Fragment() {
+
+    lateinit var tweetAdapter: ProgressAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,30 +24,21 @@ class ArchiveFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_archive, container, false)
         val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
-        recyclerView.adapter = ProgressAdapter(getProgressItems()) // Replace getProgressItems() with your own function to get the list of ProgressItems.
+        tweetAdapter = ProgressAdapter(null)
+        recyclerView.adapter = tweetAdapter // Replace getProgressItems() with your own function to get the list of ProgressItems.
         recyclerView.layoutManager = LinearLayoutManager(context)
         return view
     }
 
-    private fun getProgressItems(): List<ProgressItem> {
-
-        // Replace this with your own function to get the list of ProgressItems.
-        return listOf(
-            ProgressItem("62%", "Hate Tweet", "Hi , I am learning NLP"),
-            ProgressItem("75%", "Offensive Tweet", "Your message has a toxicity score of 75."),
-            ProgressItem("100%", "Neither Tweet", "Your message is positive"),
-            ProgressItem("62%", "Hate Tweet", "Hi , I am learning NLP"),
-            ProgressItem("75%", "Offensive Tweet", "Your message has a toxicity score of 75."),
-            ProgressItem("100%", "Neither Tweet", "Your message is positive"),
-            ProgressItem("62%", "Hate Tweet", "Hi , I am learning NLP"),
-            ProgressItem("75%", "Offensive Tweet", "Your message has a toxicity score of 75."),
-            ProgressItem("100%", "Neither Tweet", "Your message is positive"),
-            ProgressItem("62%", "Hate Tweet", "Hi , I am learning NLP"),
-            ProgressItem("75%", "Offensive Tweet", "Your message has a toxicity score of 75."),
-            ProgressItem("100%", "Neither Tweet", "Your message is positive")
-
-
-
-        )
+    override fun onResume() {
+        super.onResume()
+        loadTweets()
     }
+
+    private fun loadTweets() {
+        val list = MyDatabase.getInstance(requireContext())?.tweetDao()?.selectAllTweet()
+        tweetAdapter.getTweets(list)
+    }
+
+
 }

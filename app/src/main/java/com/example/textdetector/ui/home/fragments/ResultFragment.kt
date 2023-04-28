@@ -1,10 +1,7 @@
 package com.example.textdetector.ui.home.fragments
 
 import android.animation.ObjectAnimator
-import android.annotation.SuppressLint
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -12,10 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
 import android.widget.TextView
-import androidx.fragment.app.findFragment
-import androidx.navigation.Navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import com.example.textdetector.R
+import com.example.textdetector.ui.database.MyDatabase
+import com.example.textdetector.ui.database.model.Tweet
 import com.example.textdetector.ui.home.fragments.api.ApiInterface
 import com.example.textdetector.ui.home.fragments.api.PredictionRequest
 import com.example.textdetector.ui.home.fragments.api.PredictionResponse
@@ -25,7 +21,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import android.widget.ImageView as ImageView1
+import kotlin.properties.Delegates
 
 class ResultFragment : Fragment() {
 
@@ -55,7 +51,8 @@ class ResultFragment : Fragment() {
     private lateinit var first_percentagev:TextView
     private lateinit var second_percentagev:TextView
     private lateinit var third_percentagev:TextView
-
+    private lateinit var tweet:String
+    private var classLabel:Int = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -85,11 +82,10 @@ class ResultFragment : Fragment() {
         progressBar.visibility = View.GONE
 */
 
-
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val tweet = requireArguments().getString("tweet")
+        tweet = requireArguments().getString("tweet").toString()
         Log.d("test tweet", "the Tweet: $tweet")
 
         progressBar = view.findViewById(R.id.progress_load)
@@ -100,6 +96,7 @@ class ResultFragment : Fragment() {
         progressbar3v = view.findViewById(R.id.progressbar3)
         first_squarev = view.findViewById(R.id.first_square)
         second_squarev = view.findViewById(R.id.second_square)
+        third_squarev = view.findViewById(R.id.third_square)
         first_linev = view.findViewById(R.id.first_line)
         second_linev = view.findViewById(R.id.second_line)
         first_labelv = view.findViewById(R.id.first_label)
@@ -126,9 +123,7 @@ class ResultFragment : Fragment() {
 
                     if (response.isSuccessful) {
 
-
-
-                        val classLabel = response.body()?.classLabel
+                         classLabel = response.body()?.classLabel!!
                         val offensiveProb = response.body()?.classProbs?.offensive
                         val hateProb = response.body()?.classProbs?.hate
                         val neitherProb = response.body()?.classProbs?.neither
@@ -215,6 +210,7 @@ class ResultFragment : Fragment() {
             Log.e("MyApp", "Error parsing floats from strings: ${e.message}")
             return
         }
+        val xx = x?.toInt()
         // Get references to the progress bars and create animators for each one
         val progressBar1 = view?.findViewById<CircularProgressIndicator>(R.id.progressbar1)
         val animator1 =
@@ -232,7 +228,19 @@ class ResultFragment : Fragment() {
         animator1?.start()
         animator2?.start()
         animator3?.start()
+        xx?.let { insertTweetToDatabase(it) }
+        Log.d("TAGss", "updatePercentages: "+MyDatabase.getInstance(requireContext())?.tweetDao()?.selectAllTweet()
+        )
     }
+
+    private fun insertTweetToDatabase(xx:Int) {
+        MyDatabase.getInstance(requireContext())?.tweetDao()?.insertTweet(Tweet(
+            percent = xx,
+            tweet = tweet,
+            tweetType = classLabel
+        ))
+    }
+
     private fun updateLabelTweetText(classLabel: Int?) {
         val labelTweet = requireView().findViewById<TextView>(R.id.tweet_type)
         when (classLabel) {

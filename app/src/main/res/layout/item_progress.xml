@@ -11,16 +11,15 @@
         trackCornerRadius="5dp"
         android:layout_width="100dp"
         android:layout_height="100dp"
-
         android:progress="50"
-        app:indicatorColor="@color/blueProgess"
+        app:indicatorColor="@color/black"
         app:indicatorSize="85dp"
         app:layout_constraintStart_toStartOf="parent"
 
         app:layout_constraintTop_toTopOf="parent"
         app:trackColor="#F5F5F5"
         app:trackCornerRadius="20dp"
-        app:trackThickness="12dp" />
+        app:trackThickness="10dp" />
 
 
     <TextView

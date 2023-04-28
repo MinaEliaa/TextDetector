@@ -19,7 +19,9 @@
         tools:layout_editor_absoluteX="77dp"
         tools:layout_editor_absoluteY="236dp"
         tools:ignore="MissingConstraints"
-        android:indeterminateTint="@color/blueProgess"/>
+        android:indeterminateTint="@color/blueProgess"
+
+        />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
