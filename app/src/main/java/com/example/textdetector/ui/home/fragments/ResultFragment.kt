@@ -28,6 +28,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 import android.widget.ImageView as ImageView1
 
 class ResultFragment : Fragment() {
+
+
     // Create an instance of the Retrofit class
     private val retrofit = Retrofit.Builder()
         .baseUrl("http://10.0.2.2:8080")
@@ -35,8 +37,24 @@ class ResultFragment : Fragment() {
         .build()
     // Create an instance of the API interface
     private val apiInterface = retrofit.create(ApiInterface::class.java)
+    //Variables
     private lateinit var progressBar: ProgressBar
-
+    private lateinit var percentagev:TextView
+    private lateinit var tweet_typev:TextView
+    private lateinit var progressbar1v:ProgressBar
+    private lateinit var progressbar2v:ProgressBar
+    private lateinit var progressbar3v:ProgressBar
+    private lateinit var first_squarev:View
+    private lateinit var second_squarev:View
+    private lateinit var third_squarev:View
+    private lateinit var first_linev:View
+    private lateinit var second_linev:View
+    private lateinit var first_labelv:TextView
+    private lateinit var second_labelv:TextView
+    private lateinit var third_labelv:TextView
+    private lateinit var first_percentagev:TextView
+    private lateinit var second_percentagev:TextView
+    private lateinit var third_percentagev:TextView
 
 
     override fun onCreateView(
@@ -44,8 +62,29 @@ class ResultFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
         return inflater.inflate(R.layout.fragment_result, container, false)
-        progressBar.visibility = View.VISIBLE
+
+        //Disappear all Design except the loading progressbar
+        /*percentagev.visibility = View.GONE
+        tweet_typev.visibility = View.GONE
+        progressbar1v.visibility = View.GONE
+        progressbar2v.visibility = View.GONE
+        progressbar3v.visibility = View.GONE
+        first_squarev.visibility = View.GONE
+        second_squarev.visibility = View.GONE
+        third_squarev.visibility = View.GONE
+        first_linev.visibility = View.GONE
+        second_linev.visibility = View.GONE
+        first_labelv.visibility = View.GONE
+        second_labelv.visibility = View.GONE
+        third_labelv.visibility = View.GONE
+        first_percentagev.visibility = View.GONE
+        second_percentagev.visibility = View.GONE
+        third_percentagev.visibility = View.GONE
+        progressBar.visibility = View.GONE
+*/
+
 
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -54,6 +93,24 @@ class ResultFragment : Fragment() {
         Log.d("test tweet", "the Tweet: $tweet")
 
         progressBar = view.findViewById(R.id.progress_load)
+        percentagev = view.findViewById(R.id.percentage)
+        tweet_typev = view.findViewById(R.id.tweet_type)
+        progressbar1v = view.findViewById(R.id.progressbar1)
+        progressbar2v = view.findViewById(R.id.progressbar2)
+        progressbar3v = view.findViewById(R.id.progressbar3)
+        first_squarev = view.findViewById(R.id.first_square)
+        second_squarev = view.findViewById(R.id.second_square)
+        first_linev = view.findViewById(R.id.first_line)
+        second_linev = view.findViewById(R.id.second_line)
+        first_labelv = view.findViewById(R.id.first_label)
+        second_labelv = view.findViewById(R.id.second_label)
+        third_labelv = view.findViewById(R.id.third_label)
+        first_percentagev = view.findViewById(R.id.first_percentage)
+        second_percentagev = view.findViewById(R.id.second_percentage)
+        third_percentagev = view.findViewById(R.id.third_percentage)
+
+        progressBar.visibility = View.VISIBLE
+
 
         // Create a PredictionRequest object with the tweet text
         val requestModel = tweet?.let { PredictionRequest(it) }
@@ -68,6 +125,9 @@ class ResultFragment : Fragment() {
                     progressBar.visibility = View.GONE
 
                     if (response.isSuccessful) {
+
+
+
                         val classLabel = response.body()?.classLabel
                         val offensiveProb = response.body()?.classProbs?.offensive
                         val hateProb = response.body()?.classProbs?.hate
@@ -126,8 +186,9 @@ class ResultFragment : Fragment() {
                             "Prediction request failed with status code ${response.code()}"
                         )}}
                 override fun onFailure(call: Call<PredictionResponse>, t: Throwable) {
+
+
                     // Handle the failure
-                    progressBar.visibility = View.GONE
                     val servererror_fragment = ServerErrorFragment()
                     val bundle = Bundle()
                     servererror_fragment.arguments = bundle

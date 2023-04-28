@@ -38,7 +38,8 @@
         android:layout_marginTop="5dp"
         android:fontFamily="@font/visby_demibold"
         android:gravity="center"
-        android:text="There was a problem connecting to the server. Please try again"
+        android:text="There was a problem with internet
+        connection or connecting to the server.  Please try again"
         android:textColor="@color/greylight"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
