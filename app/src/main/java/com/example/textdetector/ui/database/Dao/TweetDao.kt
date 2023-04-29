@@ -9,6 +9,7 @@ import com.example.textdetector.ui.database.model.Tweet
 interface TweetDao {
     @Insert
     fun insertTweet(tweet:Tweet)
-    @Query("SELECT * FROM Tweet")
+//    @Query("SELECT * FROM Tweet")
+    @Query("SELECT * FROM Tweet ORDER BY id DESC")
     fun selectAllTweet():List<Tweet>
 }

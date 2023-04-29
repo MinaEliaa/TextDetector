@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:paddingTop="16dp">
+    android:paddingStart="6dp"
+    android:paddingTop="2dp">
 
 
     <com.google.android.material.progressindicator.CircularProgressIndicator
@@ -13,9 +14,8 @@
         android:layout_height="100dp"
         android:progress="50"
         app:indicatorColor="@color/black"
-        app:indicatorSize="85dp"
+        app:indicatorSize="80dp"
         app:layout_constraintStart_toStartOf="parent"
-
         app:layout_constraintTop_toTopOf="parent"
         app:trackColor="#F5F5F5"
         app:trackCornerRadius="20dp"
@@ -44,14 +44,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/number_text_view"
-        android:fontFamily="@font/visby_demibold"
-        android:text="Hate Tweet"
+        android:fontFamily="@font/helvetica_bold"
+        android:text="PFFENSIVE TWEET"
         app:layout_constraintStart_toEndOf="@id/progress_bar"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="7dp"
         android:layout_marginStart="10dp"
         android:textColor="@color/black"
-        android:textSize="28sp"
+        android:textSize="20sp"
         tools:layout_editor_absoluteX="123dp"
         tools:layout_editor_absoluteY="16dp" />
 
@@ -61,9 +61,11 @@
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/visby_demibold"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textColor="@color/grey"
-        android:text="Hi , I am learning NLP..."
+        android:text="Hi , I am learning NLP.........."
+        android:maxLines="1"
+        android:ellipsize="end"
         app:layout_constraintStart_toStartOf="@+id/text1_text_view"
         app:layout_constraintTop_toBottomOf="@id/text1_text_view"
        />
@@ -72,7 +74,7 @@
         android:id="@+id/first_line"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_marginStart="100dp"
+        android:layout_marginStart="70dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/line"

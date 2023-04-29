@@ -1,11 +1,14 @@
 package com.example.textdetector.ui.home.fragments.archive
 
 import android.animation.ObjectAnimator
+import android.content.res.ColorStateList
 import android.graphics.Color
+import android.graphics.PorterDuff
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.textdetector.R
 import com.example.textdetector.ui.database.model.Tweet
@@ -31,15 +34,44 @@ class ProgressAdapter(private var items: List<Tweet>?) : RecyclerView.Adapter<Pr
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+
         val item = items?.get(position)
         holder.numberTextView.text = item?.percent.toString()+"%"
         holder.text2TextView.text = item?.tweet
         if (item?.tweetType == 0){
+            //change the Tweet Type
             holder.text1TextView.text = "HATE TWEET"
+            //change the Tweet Color
+            holder.text2TextView.setTextColor(ContextCompat.getColor(holder.itemView.context, R.color.blueProgess))
+            //change the Indicator color
+            holder.progressBar.setIndicatorColor(ContextCompat.getColor(holder.itemView.context, R.color.blueProgess))
+            val progressAnimator = ObjectAnimator.ofInt(holder.progressBar, "progress", 0, item?.percent ?: 0)
+            progressAnimator.duration = 2000
+            progressAnimator.start()
+
+
         }else if (item?.tweetType == 1){
+            //change the Tweet Type
             holder.text1TextView.text = "OFFENSIVE TWEET"
+            //change the Tweet Color
+            holder.text2TextView.setTextColor(ContextCompat.getColor(holder.itemView.context, R.color.redProgess))
+            //change the Indicator color
+            holder.progressBar.setIndicatorColor(ContextCompat.getColor(holder.itemView.context, R.color.redProgess))
+            val progressAnimator = ObjectAnimator.ofInt(holder.progressBar, "progress", 0, item?.percent ?: 0)
+            progressAnimator.duration = 2000
+            progressAnimator.start()
+
         }else{
+            //change the Tweet Type
             holder.text1TextView.text = "NEITHER TWEET"
+            //change the Tweet Color
+            holder.text2TextView.setTextColor(ContextCompat.getColor(holder.itemView.context, R.color.yellowProgess))
+            holder.progressBar.setIndicatorColor(ContextCompat.getColor(holder.itemView.context, R.color.yellowProgess))
+            //change the Indicator color
+            val progressAnimator = ObjectAnimator.ofInt(holder.progressBar, "progress", 0, item?.percent ?: 0)
+            progressAnimator.duration = 2000
+            progressAnimator.start()
+
         }
     }
 
