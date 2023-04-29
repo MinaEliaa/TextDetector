@@ -42,8 +42,11 @@
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/rounder_gradient_bourder_new.xml" value="0.1235" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/secondprogressbar.xml" value="0.1845" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/thirdprogressbar.xml" value="0.1845" />
+        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/toast_hate_tweet.xml" value="0.189" />
+        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/toast_neither_tweet.xml" value="0.189" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/toastcorrect.xml" value="0.1675" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/toasterror.xml" value="0.1675" />
+        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/toasttweet.xml" value="0.189" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/type_tweet_rounder_bourder.xml" value="0.182" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/drawable/types_in_home_bourder.xml" value="0.191" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout-land/activity_main.xml" value="0.43963963963963965" />
@@ -71,7 +74,7 @@
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/fragment_resultsplash.xml" value="0.25025641025641027" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/fragment_server_error.xml" value="0.21052631578947367" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/fragment_welcome.xml" value="0.2296875" />
-        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/item_progress.xml" value="0.4" />
+        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/item_progress.xml" value="0.264" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/login_error_toast.xml" value="0.264" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/login_page.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/login_successful_toast.xml" value="0.25416666666666665" />
@@ -81,6 +84,10 @@
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/progress_bar.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/progress_loading.xml" value="0.22291666666666668" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/toast.xml" value="0.253125" />
+        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/tweet_toast.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/tweethate_toast.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/tweetneither_toast.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/layout/tweetoffensive_toast.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/menu/example_menu.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/Mena/AndroidStudioProjects/TextDetector/app/src/main/res/menu/home_nav_menu.xml" value="0.25416666666666665" />

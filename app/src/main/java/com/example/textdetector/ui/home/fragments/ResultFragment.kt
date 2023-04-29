@@ -2,6 +2,7 @@ package com.example.textdetector.ui.home.fragments
 
 import android.animation.ObjectAnimator
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -28,7 +29,7 @@ class ResultFragment : Fragment() {
 
     // Create an instance of the Retrofit class
     private val retrofit = Retrofit.Builder()
-        .baseUrl("http://10.0.2.2:8080")
+        .baseUrl("http://192.168.1.7:8080")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
     // Create an instance of the API interface
@@ -62,26 +63,6 @@ class ResultFragment : Fragment() {
 
         return inflater.inflate(R.layout.fragment_result, container, false)
 
-        //Disappear all Design except the loading progressbar
-        /*percentagev.visibility = View.GONE
-        tweet_typev.visibility = View.GONE
-        progressbar1v.visibility = View.GONE
-        progressbar2v.visibility = View.GONE
-        progressbar3v.visibility = View.GONE
-        first_squarev.visibility = View.GONE
-        second_squarev.visibility = View.GONE
-        third_squarev.visibility = View.GONE
-        first_linev.visibility = View.GONE
-        second_linev.visibility = View.GONE
-        first_labelv.visibility = View.GONE
-        second_labelv.visibility = View.GONE
-        third_labelv.visibility = View.GONE
-        first_percentagev.visibility = View.GONE
-        second_percentagev.visibility = View.GONE
-        third_percentagev.visibility = View.GONE
-        progressBar.visibility = View.GONE
-*/
-
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -109,6 +90,7 @@ class ResultFragment : Fragment() {
         progressBar.visibility = View.VISIBLE
 
 
+
         // Create a PredictionRequest object with the tweet text
         val requestModel = tweet?.let { PredictionRequest(it) }
         // Make a POST request to the /predict endpoint
@@ -120,6 +102,22 @@ class ResultFragment : Fragment() {
                 ) {
 
                     progressBar.visibility = View.GONE
+                    percentagev.visibility = View.VISIBLE
+                    tweet_typev.visibility = View.VISIBLE
+                    progressbar1v.visibility = View.VISIBLE
+                    progressbar2v.visibility = View.VISIBLE
+                    progressbar3v.visibility = View.VISIBLE
+                    first_squarev.visibility = View.VISIBLE
+                    second_squarev.visibility = View.VISIBLE
+                    third_squarev.visibility = View.VISIBLE
+                    first_linev.visibility = View.VISIBLE
+                    second_linev.visibility = View.VISIBLE
+                    first_labelv.visibility = View.VISIBLE
+                    second_labelv.visibility = View.VISIBLE
+                    third_labelv.visibility = View.VISIBLE
+                    first_percentagev.visibility = View.VISIBLE
+                    second_percentagev.visibility = View.VISIBLE
+                    third_percentagev.visibility = View.VISIBLE
 
                     if (response.isSuccessful) {
 
