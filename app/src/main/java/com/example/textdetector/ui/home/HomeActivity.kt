@@ -61,15 +61,12 @@ class HomeActivity : AppCompatActivity() {
         })
 
         mAuth = FirebaseAuth.getInstance()
-        accessToken = AccessToken.getCurrentAccessToken();
+        //accessToken = AccessToken.getCurrentAccessToken();
         val currentUser: FirebaseUser? = mAuth.getCurrentUser()
-        if (currentUser == null && accessToken == null) {
+        if (currentUser == null) {
             val i = Intent(this@HomeActivity, LoginActivity::class.java)
             startActivity(i)
         }
-
-
-
 
 
     }

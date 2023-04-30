@@ -7,6 +7,7 @@ import android.os.Handler
 import android.os.Looper
 import com.example.textdetector.ui.login.LoginActivity
 import com.example.textdetector.R
+import com.example.textdetector.ui.home.HomeActivity
 
 class SplashScreen : AppCompatActivity() {
 
@@ -20,7 +21,7 @@ class SplashScreen : AppCompatActivity() {
     }
 
     fun starthomeactivity() {
-        val intent = Intent(this, LoginActivity::class.java)
+        val intent = Intent(this, HomeActivity::class.java)
         startActivity(intent)
         finish()
 
